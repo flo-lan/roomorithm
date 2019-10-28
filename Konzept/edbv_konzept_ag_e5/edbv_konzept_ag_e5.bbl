@@ -13,6 +13,12 @@ Hanme Jang, Jong~Hyeon Yang, and Yu~Kiyun.
   floor plan.
 \newblock {\em Leibniz International Proceedings in Informatics}, 2018.
 
+\bibitem{or2005highly}
+Siu-hang Or, Kin-Hong Wong, Ying-kin Yu, Michael Ming-yuan Chang, and H~Kong.
+\newblock Highly automatic approach to architectural floorplan image
+  understanding \& model generation.
+\newblock {\em Pattern Recognition}, pages 25--32, 2005.
+
 \bibitem{vargas18}
 Dany Alejandro~Cabrera Vargas.
 \newblock Wall extraction and room detection for multi-unit architectural floor

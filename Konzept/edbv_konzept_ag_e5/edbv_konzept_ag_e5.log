@@ -1,43 +1,47 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840) (preloaded format=pdflatex 2018.11.29)  28 OCT 2019 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.3)  28 OCT 2019 22:25
 entering extended mode
-**./edbv_konzept_ag_e5.tex
-(edbv_konzept_ag_e5.tex
-LaTeX2e <2018-04-01> patch level 5
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2019/10/12 v3.27 KOMA-Script document class (article)
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2019/10/12 v3.27 KOMA-Script package (KOMA-Script-dependent b
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**edbv_konzept_ag_e5.tex
+(./edbv_konzept_ag_e5.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2018/03/30 v3.25 KOMA-Script document class (article)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2019/10/12 v3.27 KOMA-Script package (KOMA-Script-independent 
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/usr/local/share/miktex-texmf/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2019/10/12 v3.27 KOMA-Script package (loading files)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
 )))
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2019/10/12 v3.27 KOMA-Script package (handling toc-files)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 137.
+(tocbasic)             for `toc' on input line 134.
 Class scrartcl Info: File `scrsize11pt.clo' used instead of
-(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 220
-8.
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 211
+4.
 
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2019/10/12 v3.27 KOMA-Script font size class option (11pt
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt
 )
 )
-(/home/flo/.miktex/texmfs/install/tex/latex/koma-script/typearea.sty
-Package: typearea 2019/10/12 v3.27 KOMA-Script package (type area)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count80
 \ta@hblk=\skip43
@@ -60,7 +64,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1716.
+(typearea)              on input line 1706.
 )
 \c@part=\count81
 \c@section=\count82
@@ -68,98 +72,61 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
-\scr@dte@section@maxnumwidth=\skip47
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\section on input line 4702.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\section on input line 4702.
-\scr@dte@part@maxnumwidth=\skip48
-Class scrartcl Info: using compatibility default `afterindent=false'
-(scrartcl)           for `\part on input line 4710.
+\scr@dte@part@maxnumwidth=\skip47
+\scr@dte@section@maxnumwidth=\skip48
 \scr@dte@subsection@maxnumwidth=\skip49
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsection on input line 4720.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsection on input line 4720.
 \scr@dte@subsubsection@maxnumwidth=\skip50
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subsubsection on input line 4730.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subsubsection on input line 4730.
 \scr@dte@paragraph@maxnumwidth=\skip51
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\paragraph on input line 4740.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\paragraph on input line 4740.
 \scr@dte@subparagraph@maxnumwidth=\skip52
-Class scrartcl Info: using compatibility default `runin=bysign'
-(scrartcl)           for `\subparagraph on input line 4750.
-Class scrartcl Info: using compatibility default `afterindent=bysign'
-(scrartcl)           for `\subparagraph on input line 4750.
 \abovecaptionskip=\skip53
 \belowcaptionskip=\skip54
 \c@pti@nb@sid@b@x=\box27
+\scr@dte@figure@maxnumwidth=\skip55
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 5969.
-\scr@dte@figure@maxnumwidth=\skip55
+(tocbasic)             for `lof' on input line 5439.
 \c@figure=\count87
+\scr@dte@table@maxnumwidth=\skip56
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 5981.
-\scr@dte@table@maxnumwidth=\skip56
+(tocbasic)             for `lot' on input line 5451.
 \c@table=\count88
-Class scrartcl Info: Redefining `\numberline' on input line 6145.
+Class scrartcl Info: Redefining `\numberline' on input line 5615.
 \bibindent=\dimen102
 )
-(/usr/local/share/miktex-texmf/tex/generic/babel/babel.sty
-Package: babel 2018/11/13 3.27 The Babel package
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
 
-(/usr/local/share/miktex-texmf/tex/generic/babel/switch.def
-File: switch.def 2018/11/13 3.27 Babel switching mechanism
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
 )
-*************************************
-* Local config file bblopts.cfg used
-*
-(/home/flo/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(/usr/local/share/miktex-texmf/tex/latex/babel-german/ngerman.ldf
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel-german/ngerman.ldf
 Language: ngerman 2018/03/29 v2.10 German support for babel (post-1996 orthogra
 phy)
 
-(/usr/local/share/miktex-texmf/tex/latex/babel-german/ngermanb.ldf
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel-german/ngermanb.ldf
 Language: ngermanb 2018/03/29 v2.10 German support for babel (post-1996 orthogr
 aphy)
 
-(/usr/local/share/miktex-texmf/tex/generic/babel/babel.def
-File: babel.def 2018/11/13 3.27 Babel common definitions
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 
-(/usr/local/share/miktex-texmf/tex/generic/babel/txtbabel.def)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count90
 )
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language `German (new orthography)' into the format.
-
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 47.
-
-\l@ngerman = a dialect from \language0
 Package babel Info: Making " an active character on input line 121.
-))) (/usr/local/share/miktex-texmf/tex/latex/base/inputenc.sty
+)))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-(/home/flo/.miktex/texmfs/install/tex/latex/algorithms/algorithmic.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
-(/usr/local/share/miktex-texmf/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@ALC@unique=\count91
@@ -169,11 +136,11 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \ALC@tlm=\skip57
 \algorithmicindent=\skip58
 )
-(/home/flo/.miktex/texmfs/install/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/share/miktex-texmf/tex/latex/float/float.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count95
 \float@exts=\toks17
@@ -184,44 +151,44 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@algorithm=\toks19
 \c@algorithm=\count96
 )
-(/usr/local/share/miktex-texmf/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/share/miktex-texmf/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/share/miktex-texmf/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/share/miktex-texmf/tex/latex/graphics-cfg/graphics.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/share/miktex-texmf/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(/usr/local/share/miktex-texmf/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip59
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/share/miktex-texmf/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/share/miktex-texmf/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks20
 \ex@=\dimen106
 ))
-(/usr/local/share/miktex-texmf/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen107
 )
-(/usr/local/share/miktex-texmf/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count97
@@ -262,25 +229,25 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/local/share/miktex-texmf/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/share/miktex-texmf/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/home/flo/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
-Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 
-(/home/flo/.miktex/texmfs/install/tex/latex/caption/caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/home/flo/.miktex/texmfs/install/tex/latex/caption/caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen115
 \captionmargin@=\dimen116
 \captionwidth=\dimen117
@@ -290,24 +257,23 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@hangindent=\dimen121
 )
 Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count109
-\c@ContinuedFloat=\count110
+\c@ContinuedFloat=\count109
 Package caption Info: float package is loaded.
 )
-\c@subfigure=\count111
-\c@subtable=\count112
+\c@subfigure=\count110
+\c@subtable=\count111
 )
-(/usr/local/share/miktex-texmf/tex/latex/multirow/multirow.sty
-Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
+(/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cntb=\count113
+\multirow@cntb=\count112
 \multirow@dima=\skip63
 \bigstrutjot=\dimen122
 )
-(/usr/local/share/miktex-texmf/tex/latex/graphics/color.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-(/usr/local/share/miktex-texmf/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
@@ -316,7 +282,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 LaTeX Warning: Unused global option(s):
     [deutsch].
 
-(edbv_konzept_ag_e5.aux)
+(./edbv_konzept_ag_e5.aux)
 \openout1 = `edbv_konzept_ag_e5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -331,48 +297,45 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
-Package scrbase Info: activating ngerman \contentsname on input line 15.
-Package scrbase Info: activating ngerman \listfigurename on input line 15.
-Package scrbase Info: activating ngerman \listtablename on input line 15.
 
-(/home/flo/.miktex/texmfs/install/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count113
 \scratchdimen=\dimen123
 \scratchbox=\box32
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count117
+\MPscratchCnt=\count116
 \MPscratchDim=\dimen124
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks26
-) (/usr/local/share/miktex-texmf/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/share/miktex-texmf/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(/usr/local/share/miktex-texmf/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -381,12 +344,12 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/share/miktex-texmf/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -399,102 +362,63 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 
-(/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
-(/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (3.88266pt too wide) in paragraph at lines 37--39
-\OT1/cmr/m/n/10.95 R[]aume aus einem Grundrissplan zu erkennen und diese in ein
-em Datensatz abzuspeichern. 
- []
-
-
 Overfull \hbox (20.00464pt too wide) in paragraph at lines 40--42
-\OT1/cmr/m/n/10.95 Unser Projekt wird auf dem Dataset \OT1/cmr/m/it/10.95 cubic
-asa5k\OT1/cmr/m/n/10.95 (https://github.com/CubiCasa/CubiCasa5k)
- []
-
-
-Overfull \hbox (3.97633pt too wide) in paragraph at lines 40--42
-\OT1/cmr/m/n/10.95 aufbauen, es k[]onnen jedoch auch andere Grundrisse, die der
- in unseren Daten verwendeten
- []
-
-
-Overfull \hbox (27.36249pt too wide) in paragraph at lines 43--45
-\OT1/cmr/m/n/10.95 Eingabedateien enth[]alt. Enthalten sind: Anzahl der R[]aume
-, Fenster und T[]uren, Vorhandensein
- []
-
-
-Overfull \hbox (6.10434pt too wide) in paragraph at lines 43--45
-\OT1/cmr/m/n/10.95 von Stiegen und die Gr[]oe der R[]aume (bei vorhandener Fl[
-]achenangabe, sonst prozentuell). 
- []
-
-
-Overfull \hbox (16.09619pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/n/10.95 Der Input besteht aus einem oder mehreren Graustufenbildern,
- die jeweils den Grundrissplan
+\OT1/cmr/m/n/10.95 Un-ser Pro-jekt wird auf dem Da-ta-set \OT1/cmr/m/it/10.95 c
+u-bi-ca-sa5k\OT1/cmr/m/n/10.95 (https://github.com/CubiCasa/CubiCasa5k)
  []
 
 [1
 
 
-{/home/flo/.miktex/texmfs/data/pdftex/config/pdftex.map}]
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 63.
 
-(/usr/local/share/miktex-texmf/tex/latex/base/omscmr.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
-<model.png, id=9, 501.875pt x 501.875pt>
+<model.png, id=10, 501.875pt x 501.875pt>
 File: model.png Graphic file (type png)
 <use model.png>
 Package pdftex.def Info: model.png  used on input line 74.
 (pdftex.def)             Requested size: 167.29967pt x 167.30402pt.
- [2 <./model.png>]
-
-LaTeX Warning: Citation `or2005highly' on page 3 undefined on input line 103.
-
-(edbv_konzept_ag_e5.bbl
-Underfull \hbox (badness 1320) in paragraph at lines 4--9
-[]\OT1/cmr/m/n/10.95 Georg Gerstweiler, Lukas Furlan, Mikhail Timofeev, and Han
-nes Kaufmann.
- []
-
-) [3] (edbv_konzept_ag_e5.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [2 <./model.png>] (./edbv_konzept_ag_e5.bbl) [3] (./edbv_konzept_ag_e5.aux) ) 
 Here is how much of TeX's memory you used:
- 6974 strings out of 494889
- 123231 string characters out of 3178935
- 301681 words of memory out of 3000000
- 10495 multiletter control sequences out of 15000+200000
- 13022 words of font info for 50 fonts, out of 3000000 for 9000
- 0 hyphenation exceptions out of 8191
- 51i,9n,61p,10106b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/share/
-miktex-texmf/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/share/mikt
-ex-texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-tex
-mf/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on edbv_konzept_ag_e5.pdf (3 pages, 114234 bytes).
+ 6401 strings out of 492649
+ 106535 string characters out of 6129623
+ 278116 words of memory out of 5000000
+ 10180 multiletter control sequences out of 15000+600000
+ 12714 words of font info for 49 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 51i,9n,52p,9124b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+<
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on edbv_konzept_ag_e5.pdf (3 pages, 101994 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 35 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

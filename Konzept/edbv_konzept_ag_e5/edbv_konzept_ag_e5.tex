@@ -40,7 +40,7 @@ Ziel des Projekts ist es, bestimmte Merkmale wie Wände, Türen, Fenster, Stiege
 Als Eingabe verwenden wir 2D-Grundrisspläne in MATLAB-kompatiblen Datentypen.
 %\textit{Kommentar: Welche Eingabe benötigt euer Programm, muss der User Parameter wählen, etc. ?}
 \section{Ausgabe}
-Die Ausgabe ist eine Datei im JSON-Format, die die Auswertung der Analyse der Eingabedateien enthält. 
+Die Ausgabe ist eine Datei im JSON-Format, die die Auswertung der Analyse der Eingabedateien enthält. Enthalten sind: Anzahl der Räume, Fenster und Türen, Vorhandensein von Stiegen und die Größe der Räume (bei vorhandener Flächenangabe, sonst prozentuell).
 %\textit{Kommentar: In welcher Form wird dem User der Output eures Programms präsentiert?}
 \section{Voraussetzungen und Bedingungen}
 Der Input besteht aus einem oder mehreren Graustufenbildern, die jeweils den Grundrissplan einer eingeschoßigen Wohnung darstellen. Die Notation der Symbole sollte der gängingen Symbolik entsprechen. Um die Größe der Räume zu erkennen, muss die Größe mindestens eines Raumes deutlich angegeben sein.
@@ -72,8 +72,8 @@ Methodik-Pipeline
 \section{Datenbeispiel}
 \begin{figure}[h!]
  \centering
- \includegraphics[width=0.4\textwidth]{img.jpg}
- \caption{puppy}
+ \includegraphics[width=0.4\textwidth]{model.png}
+ \caption{Beispiel eines Grundrisses}
  \label{fig:img}
 \end{figure}
 \section{Zeitplan}
@@ -83,18 +83,30 @@ Methodik-Pipeline
 		\hline
 		Meilenstein & abgeschlossen am & Arbeitsaufwand in h\\
 		\hline
-		...&... &...\\
+		Erster Prototyp & 1.Dezember & 100h\\
+		Anzahl der Räume & 20.Dezember & 25h\\
+		Anzahl der Fenster & 20.Dezember & 25h\\
+		Anzahl der Türen & 20.Dezember & 25h\\
+		Stiegenerkennung & 20.Dezember & 25h\\
+		Raumgrößen & 20.Dezember & 25h\\
+		Tests, Evaluierung & 30.Dezember & 55h\\
+		Bericht & 3.Jänner & 20h\\
 		\hline
 		\end{tabular}
 \end{table}
-\textit{Kommentar: Definiert euch „Meilensteine“. Die vorgegebenen Termine (zB. Zwischenpräsentation) sind hier nicht von Interesse, stellt euch eher die Frage: Wann rechnet ihr mit einem fertigen Prototyp (mit Hilfe von Matlab-Toolboxes)? Wann soll danach ein gewisser Arbeitsschritt (entsprechend eurer Methodik-Pipeline) fertig implementiert sein? Plant auch Zeit für zB. Tests, Evaluierung etc. ein.
-Gebt weiters pro Arbeitsschritt an, wieviel Arbeitsaufwand (Stunden) eurer Meinung nach zur Umsetzung notwendig sind. Bedenkt, dass es sich bei EDBV um eine Übung im Ausmaß von 3.0 ECTs handelt. Für 1.0 ECTs rechnet man mit 25h Arbeitsaufwand pro Semester. Auf Teil1 (die Gruppenphase von EDBV) entfallen 2.4 dieser 3.0 ECTs und somit 60h Arbeit pro Gruppenmitglied. Wir rechnen daher für Teil 1 mit 300h Arbeit pro Gruppe.
-}\\
-\\
-\textit{Kommentar: Gebt eine relevante Literaturquelle (Bücher bzw. Kapitel, Konferenz- oder Journal-Papers) pro Gruppenmitglied (im kompilierten Bibtex-Format - Beispiele für Referenzen im Bibtex-Format: http://verbosus.com/bibtex-style-examples.html?lang=de). Diese Quellen sollten für euch bei zB. der Implementierung einer Methode, der Wahl von Parametern, etc. helfen. Können aber auch ein ähnliches Problem behandeln und motivieren, warum ihr euch für gewisse Methodik entschieden habt.}
+%\textit{Kommentar: Definiert euch „Meilensteine“. Die vorgegebenen Termine (zB. Zwischenpräsentation) sind hier nicht von Interesse, stellt euch eher die Frage: Wann rechnet ihr mit einem fertigen Prototyp (mit Hilfe von Matlab-Toolboxes)? Wann soll danach ein gewisser Arbeitsschritt (entsprechend eurer Methodik-Pipeline) fertig implementiert sein? Plant auch Zeit für zB. Tests, Evaluierung etc. ein.
+%Gebt weiters pro Arbeitsschritt an, wieviel Arbeitsaufwand (Stunden) eurer Meinung nach zur Umsetzung notwendig sind. Bedenkt, dass es sich bei EDBV um eine Übung im Ausmaß von 3.0 ECTs handelt. Für 1.0 ECTs rechnet man mit 25h Arbeitsaufwand pro Semester. Auf Teil1 (die Gruppenphase von EDBV) entfallen 2.4 dieser 3.0 ECTs und somit 60h Arbeit pro Gruppenmitglied. Wir rechnen daher für Teil 1 mit 300h Arbeit pro Gruppe.
+%}
+\begin{itemize}
+	\item Anzahl der Türen: Filip Hörtner \cite{TUW-274401}
+	\item Anzahl der Räume: Mark Alam \cite{vargas18}
+
+	
+\end{itemize}
+%\textit{Kommentar: Gebt eine relevante Literaturquelle (Bücher bzw. Kapitel, Konferenz- oder Journal-Papers) pro Gruppenmitglied (im kompilierten Bibtex-Format - Beispiele für Referenzen im Bibtex-Format: http://verbosus.com/bibtex-style-examples.html?lang=de). Diese Quellen sollten für euch bei zB. der Implementierung einer Methode, der Wahl von Parametern, etc. helfen. Können aber auch ein ähnliches Problem behandeln und motivieren, warum ihr euch für gewisse Methodik entschieden habt.}
 %%------------------------------------------------------
 \bibliographystyle{plain}
-\nocite{*}
+%\nocite{*}
 \bibliography{edbv_lit}
 %%Bei verwendung von Latex schreibt ihr eure Referenzen in ein eigenes bib-File (siehe hier Beispiel in edbv_lit.bib). Weitere Information zum Einbinden von BibTex gibt es hier: http://www.bibtex.org/Using/de/
 %%------------------------------------------------------

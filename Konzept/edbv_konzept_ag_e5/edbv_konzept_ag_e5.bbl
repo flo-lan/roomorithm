@@ -1,8 +1,16 @@
 \begin{thebibliography}{1}
 
-\bibitem{lowe2004}
-David~G Lowe.
-\newblock Distinctive image features from scale-invariant keypoints.
-\newblock {\em International journal of computer vision}, 60(2):91--110, 2004.
+\bibitem{TUW-274401}
+Georg Gerstweiler, Lukas Furlan, Mikhail Timofeev, and Hannes Kaufmann.
+\newblock Extraction of structural and semantic data from 2d floor plans for
+  interactive and immersive vr real estate exploration.
+\newblock {\em Technologies - Open Access Multidisciplinary Engineering
+  Journal}, 6(101), 2018.
+
+\bibitem{vargas18}
+Dany Alejandro~Cabrera Vargas.
+\newblock Wall extraction and room detection for multi-unit architectural floor
+  plans.
+\newblock Master's thesis, University of Victoria, 2018.
 
 \end{thebibliography}

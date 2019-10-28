@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.3)  25 OCT 2019 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.3)  28 OCT 2019 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**edbv_konzept_ag_xx.tex
-(./edbv_konzept_ag_xx.tex
+**edbv_konzept_ag_e5.tex
+(./edbv_konzept_ag_e5.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -282,8 +282,8 @@ Package color Info: Driver file: pdftex.def on input line 147.
 LaTeX Warning: Unused global option(s):
     [deutsch].
 
-(./edbv_konzept_ag_xx.aux)
-\openout1 = `edbv_konzept_ag_xx.aux'.
+(./edbv_konzept_ag_e5.aux)
+\openout1 = `edbv_konzept_ag_e5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -389,42 +389,30 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
-<img.jpg, id=9, 249.93375pt x 225.84375pt>
-File: img.jpg Graphic file (type jpg)
-<use img.jpg>
-Package pdftex.def Info: img.jpg  used on input line 75.
-(pdftex.def)             Requested size: 167.29967pt x 151.18011pt.
- [2 <./img.jpg>]
-(./edbv_konzept_ag_xx.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 92--1
-
- []
-
-
-Overfull \hbox (12.859pt too wide) in paragraph at lines 92--1
-\OT1/cmr/m/it/10.95 fe-ren-zen im Bibtex-Format: http://verbosus.com/bibtex-sty
-le-examples.html?lang=de). Die-
- []
-
-) [3] (./edbv_konzept_ag_xx.aux) ) 
+<model.png, id=9, 401.5pt x 401.5pt>
+File: model.png Graphic file (type png)
+<use model.png>
+Package pdftex.def Info: model.png  used on input line 75.
+(pdftex.def)             Requested size: 167.29967pt x 167.30554pt.
+ [2 <./model.png>] (./edbv_konzept_ag_e5.bbl) [3] (./edbv_konzept_ag_e5.aux) ) 
 Here is how much of TeX's memory you used:
- 6398 strings out of 492649
- 106491 string characters out of 6129623
- 277104 words of memory out of 5000000
- 10177 multiletter control sequences out of 15000+600000
+ 6399 strings out of 492649
+ 106513 string characters out of 6129623
+ 279108 words of memory out of 5000000
+ 10178 multiletter control sequences out of 15000+600000
  12714 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,8n,52p,9124b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb>
-Output written on edbv_konzept_ag_xx.pdf (3 pages, 104418 bytes).
+ 51i,9n,52p,9124b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+<
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on edbv_konzept_ag_e5.pdf (3 pages, 90129 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 37 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

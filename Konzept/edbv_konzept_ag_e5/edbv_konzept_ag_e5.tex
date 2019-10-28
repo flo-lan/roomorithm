@@ -37,20 +37,19 @@ Mark Alam (11808580)}
 Ziel des Projekts ist es, bestimmte Merkmale wie Wände, Türen, Fenster, Stiegen und Räume aus einem Grundrissplan zu erkennen und diese in einem Datensatz abzuspeichern.
 %\textit{Kommentar: erklärt euer Projekt in einem Satz}
 \section{Eingabe}
-Als Eingabe verwenden wir 2D-Grundrisspläne in MATLAB-kompatiblen Datentypen.
+Als Eingabe verwenden wir 2D-Grundrisspläne in MATLAB-kompatiblen Datentypen. Unser Projekt wird auf dem Dataset \textit{cubicasa5k}(https://github.com/CubiCasa/CubiCasa5k) aufbauen, es können jedoch auch andere Grundrisse, die der in unseren Daten verwendeten Symbolik folgen, verarbeitet werden.
 %\textit{Kommentar: Welche Eingabe benötigt euer Programm, muss der User Parameter wählen, etc. ?}
 \section{Ausgabe}
 Die Ausgabe ist eine Datei im JSON-Format, die die Auswertung der Analyse der Eingabedateien enthält. Enthalten sind: Anzahl der Räume, Fenster und Türen, Vorhandensein von Stiegen und die Größe der Räume (bei vorhandener Flächenangabe, sonst prozentuell).
 %\textit{Kommentar: In welcher Form wird dem User der Output eures Programms präsentiert?}
 \section{Voraussetzungen und Bedingungen}
-Der Input besteht aus einem oder mehreren Graustufenbildern, die jeweils den Grundrissplan einer eingeschoßigen Wohnung darstellen. Die Notation der Symbole sollte der gängingen Symbolik entsprechen. Um die Größe der Räume zu erkennen, muss die Größe mindestens eines Raumes deutlich angegeben sein.
+Der Input besteht aus einem oder mehreren Graustufenbildern, die jeweils den Grundrissplan einer eingeschoßigen Wohnung darstellen. Die Notation der Symbole sollte der gängigen Symbolik entsprechen.
 
 %\textit{Kommentar: Welche Eigenschaften muss der Input erfüllen, damit ihr damit arbeiten könnt (zB.: Kameraeinstellungen, Hintergrundeigenschaften, etc.)?}
 \section{Methodik}
 Methodik-Pipeline
 \begin{enumerate}
 	\item Umwandlung in ein Binärbild - Threshold nach Otsu
-	\item Texterkennung zur Größenbestimmung - OCR
 	\item Entfernung von Details - Kantenfilter
 	\item Flächenbestimmung - Distanztransformation
 	\item Erkennung der Türen und Abtrennung der Räume - Hough-Transformation

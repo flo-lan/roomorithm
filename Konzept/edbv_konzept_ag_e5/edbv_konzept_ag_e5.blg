@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: edbv_konzept_ag_e5.aux
 The style file: plain.bst
 Database file #1: edbv_lit.bib
-You've used 2 entries,
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            509 strings with 4442 characters,
-and the built_in function-call counts, 525 in all, are:
-= -- 49
-> -- 30
+            513 strings with 4618 characters,
+and the built_in function-call counts, 796 in all, are:
+= -- 74
+> -- 48
 < -- 0
-+ -- 12
-- -- 10
-* -- 34
-:= -- 107
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 11
++ -- 19
+- -- 16
+* -- 51
+:= -- 158
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 17
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 18
-empty$ -- 33
-format.name$ -- 10
-if$ -- 99
+cite$ -- 3
+duplicate$ -- 28
+empty$ -- 50
+format.name$ -- 16
+if$ -- 152
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 1
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 8
+int.to.str$ -- 3
+missing$ -- 2
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 14
 preamble$ -- 1
-purify$ -- 9
+purify$ -- 14
 quote$ -- 0
-skip$ -- 14
+skip$ -- 21
 stack$ -- 0
-substring$ -- 10
-swap$ -- 1
+substring$ -- 15
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 12
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 24
+while$ -- 6
+width$ -- 4
+write$ -- 34

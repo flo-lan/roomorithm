@@ -37,7 +37,7 @@ Mark Alam (11808580)}
 Ziel des Projekts ist es, bestimmte Merkmale wie Wände, Türen, Fenster, Stiegen und Räume aus einem Grundrissplan zu erkennen und diese in einem Datensatz abzuspeichern.
 %\textit{Kommentar: erklärt euer Projekt in einem Satz}
 \section{Eingabe}
-Als Eingabe verwenden wir 2D-Grundrisspläne in MATLAB-kompatiblen Datentypen. Unser Projekt wird auf dem Dataset \textit{cubicasa5k}(https://github.com/CubiCasa/CubiCasa5k) aufbauen, es können jedoch auch andere Grundrisse, die der in unseren Daten verwendeten Symbolik folgen, verarbeitet werden.
+Als Eingabe verwenden wir 2D-Grundrisspläne in MATLAB-kompatiblen Datentypen. Unser Projekt wird auf dem Dataset \textit{cubicasa5k} (https://github.com/CubiCasa/CubiCasa5k) aufbauen, es können jedoch auch andere Grundrisse, die der in unseren Daten verwendeten Symbolik folgen, verarbeitet werden.
 %\textit{Kommentar: Welche Eingabe benötigt euer Programm, muss der User Parameter wählen, etc. ?}
 \section{Ausgabe}
 Die Ausgabe ist eine Datei im JSON-Format, die die Auswertung der Analyse der Eingabedateien enthält. Enthalten sind: Anzahl der Räume, Fenster und Türen, Vorhandensein von Stiegen und die Größe der Räume (bei vorhandener Flächenangabe, sonst prozentuell).
@@ -97,12 +97,11 @@ Methodik-Pipeline
 %Gebt weiters pro Arbeitsschritt an, wieviel Arbeitsaufwand (Stunden) eurer Meinung nach zur Umsetzung notwendig sind. Bedenkt, dass es sich bei EDBV um eine Übung im Ausmaß von 3.0 ECTs handelt. Für 1.0 ECTs rechnet man mit 25h Arbeitsaufwand pro Semester. Auf Teil1 (die Gruppenphase von EDBV) entfallen 2.4 dieser 3.0 ECTs und somit 60h Arbeit pro Gruppenmitglied. Wir rechnen daher für Teil 1 mit 300h Arbeit pro Gruppe.
 %}
 \begin{itemize}
+	\item Stiegenerkennung: Leonhard Eder \cite{Dosch2000}
 	\item Anzahl der Türen: Filip Hörtner \cite{TUW-274401}
 	\item Größe der Räume: Raphael Schimmerl \cite{jang18}
-	\item Anzahl der Räume: Mark Alam \cite{vargas18}
 	\item Anzahl der Fenster: Florian Langeder \cite{or2005highly}
-	\item Stiegenerkennung: Leonhard Eder \cite{Dosch2000}
-
+	\item Anzahl der Räume: Mark Alam \cite{vargas18}
 	
 \end{itemize}
 %\textit{Kommentar: Gebt eine relevante Literaturquelle (Bücher bzw. Kapitel, Konferenz- oder Journal-Papers) pro Gruppenmitglied (im kompilierten Bibtex-Format - Beispiele für Referenzen im Bibtex-Format: http://verbosus.com/bibtex-style-examples.html?lang=de). Diese Quellen sollten für euch bei zB. der Implementierung einer Methode, der Wahl von Parametern, etc. helfen. Können aber auch ein ähnliches Problem behandeln und motivieren, warum ihr euch für gewisse Methodik entschieden habt.}

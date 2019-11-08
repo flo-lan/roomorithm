@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{Dosch2000}
+Philippe Dosch, Karl Tombre, Christian Ah-Soon, and G{\'e}rald Masini.
+\newblock A complete system for the analysis of architectural drawings.
+\newblock {\em International Journal on Document Analysis and Recognition},
+  3(2):102--116, Dec 2000.
+
 \bibitem{TUW-274401}
 Georg Gerstweiler, Lukas Furlan, Mikhail Timofeev, and Hannes Kaufmann.
 \newblock Extraction of structural and semantic data from 2d floor plans for

@@ -1,7 +1,7 @@
 function main
- A = imread('Datei1.png');
+ A = imread('img/Datei1.png');
  imshow(A)
- %distanceTransformation(filename);
+ distanceTransformation(filename);
 end
 
 function distanceTransformation(~)

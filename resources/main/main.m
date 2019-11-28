@@ -1,4 +1,9 @@
 function main
-A = imread('resources/img/Datei1.png')
-imshow(A)
+ A = imread('Datei1.png');
+ imshow(A)
+ %distanceTransformation(filename);
+end
+
+function distanceTransformation(~)
+ 
 end

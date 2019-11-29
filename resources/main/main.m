@@ -1,9 +1,5 @@
 function main
- A = imread('img/Datei1.png');
- imshow(A)
- distanceTransformation(filename);
-end
-
-function distanceTransformation(~)
- 
+ img = imread('img/Datei4.png');
+ B = roomdetection(img);
+ imshow(B)
 end

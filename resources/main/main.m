@@ -6,4 +6,4 @@ function main
  %imshow(img)
  %B = roomdetection(img);
  %imshow(B)
- end
+end

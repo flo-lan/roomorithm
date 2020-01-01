@@ -28,6 +28,9 @@ for i = 1:numel(x)
     end
 end
 %figure;
+HS = mat2gray(HS);
+HS = imcomplement(HS);
+HS = imbinarize(HS, 0.5);
 imshow(HS);
 
 H = HS;

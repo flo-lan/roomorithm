@@ -1,6 +1,6 @@
 function output = doordetection()
-%DOORDETECTION Summary of this function goes here
-%   Detailed explanation goes here
+%DOORDETECTION Author: Hoertner Filip
+%   Detects doors
 
 %Read an Image A(Template)
 A1 = imread('img/Datei1.png');

@@ -15,8 +15,8 @@ rho = cell(1,numel(x));
 %Calculating the Hough Transform
 for i = 1: numel(x)
     rho{i} = x(i).*cos(theta) + y(i).*sin(theta); % [-sqrt(2),sqrt(2)]*D rho interval
-    plot(theta,-rho{i});
-    hold on;
+    %plot(theta,-rho{i});
+    %hold on;
 end
 
 %Creating the Hough Space as an Image
@@ -27,8 +27,8 @@ for i = 1:numel(x)
         HS(rho{i}(j),j) = HS(rho{i}(j),j) + 1; 
     end
 end
-figure;
-imshow(HS)
+%figure;
+imshow(HS);
 
 H = HS;
 end

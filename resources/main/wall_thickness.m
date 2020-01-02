@@ -1,5 +1,5 @@
 function size = wall_thickness(bin_img)
-%WALL_THICKNESS Author: Hoertner Filip
+%WALL_THICKNESS Author: Alam Mark
 %   Detects appr. average wall thickness
 
  h = hough_tr(bin_img);

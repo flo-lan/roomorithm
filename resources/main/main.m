@@ -5,11 +5,9 @@ function main
  %img2 = imcomplement(img2);
  
  w_t = wall_thickness(img2)
- 
  %imshowpair(img,img2,'montage');
  
  doordetection(img2);
  
  
 end
-

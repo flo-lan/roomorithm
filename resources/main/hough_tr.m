@@ -9,7 +9,7 @@ HS = zeros(ceil(2.*D),numel(theta));
 [y,x] = find(bin_img);
 y = y - 1;
 x = x - 1;
-figure;
+%figure;
 rho = cell(1,numel(x));
 
 %Calculating the Hough Transform
@@ -32,7 +32,7 @@ HS = mat2gray(HS);
 HS = imcomplement(HS);
 HS = imbinarize(HS, 0.7);
 HS = HS(:,10:end-10);
-imshow(HS);
+%imshow(HS);
 
 H = HS;
 end

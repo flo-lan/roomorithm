@@ -2,14 +2,23 @@ function size = wall_thickness(bin_img)
 %WALL_THICKNESS Author: Hoertner Filip
 %   Detects appr. average wall thickness
 
-[M,T,R] = hough(bin_img, 'RhoResolution', 0.5, 'Theta', -90:0.5:89);
-imshow(imadjust(rescale(M)), 'XData', T, 'YData', R);
-xlabel('\theta')
-ylabel('\rho');
-axis on, axis normal;
-colormap(gca,hot);
-
-size = 7;
+ h = hough_tr(bin_img);
+ h = imcomplement(h);
+ [y0,x0] = find(h);
+ 
+ L = bwlabel(h, 8);
+ L2 = L>0;
+ L = L(L2);
+ L_sort = sort(L);
+ 
+ M = max(L_sort,[],'all');
+ A = zeros(M,1);
+ for k = 1:length(L_sort)
+     A(L_sort(k)) = A(L_sort(k))+1;
+ end
+ 
+ A = A(A>50);
+ size = mean(A)/15;
 
 end
 

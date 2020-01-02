@@ -24,7 +24,18 @@ function output = doordetection(bin_img, w_t)
     end
     D = D(3:end, :);
     
-    D
+    E = zeros(2);
+    
+    for i = 1:size(D)-1
+        for j = i+1:size(D)
+            if(sqrt(D(i, 1)^2 - D(j, 1)^2) > w_t*0.5 && sqrt(D(i, 1)^2 - D(j, 1)^2) < w_t*1.5)
+                E(end+1,:) = D(i,:); 
+            end
+        end
+    end
+    
+    
+    E
 
 end
 

@@ -7,7 +7,7 @@ function main
  w_t = wall_thickness(img2)
  %imshowpair(img,img2,'montage');
  
- doordetection(img2);
+ doordetection(img2, w_t);
  
  
 end

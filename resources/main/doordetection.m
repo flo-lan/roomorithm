@@ -9,19 +9,20 @@ function output = doordetection(bin_img, w_t)
 
     C = sortrows(C)
     
-    D = zeros(0);
+    D = zeros(2);
     
-    if (abs(C(1,1)-C(2,1))>w_t*0.5 & abs(C(1,1)-C(2,1))<w_t*1.5)
-        D = [D,C(1,:)];
+    if (abs(C(1,1)-C(2,1))<w_t*1.5)
+        D(end+1) = C(1,:);
     end
     for i = 2:numel(C(1))-1
-        if ((abs(C(i,1)-C(i-1,1))>w_t*0.5 & abs(C(i,1)-C(i-1,1))<w_t*1.5) | (abs(C(i,1)-C(i+1,1))>w_t*0.5 & abs(C(i,1)-C(i+1,1))<w_t*1.5))
-           D = [D,C(i,:)]; 
+        if ((abs(C(i,1)-C(i-1,1))<w_t*1.5) | (abs(C(i,1)-C(i+1,1))<w_t*1.5))
+           D(end+1) = C(i,:); 
         end
     end
-    if (abs(C(end,1)-C(end-1,1))>w_t*0.5 & abs(C(end,1)-C(end-1,1))<w_t*1.5)
-        D = [D,C(end,:)];
+    if (abs(C(end,1)-C(end-1,1))<w_t*1.5)
+        D(end+1) = C(end,:);
     end
+    D = D(3:end, :);
     
     D
 

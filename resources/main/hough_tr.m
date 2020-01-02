@@ -30,7 +30,8 @@ end
 %figure;
 HS = mat2gray(HS);
 HS = imcomplement(HS);
-HS = imbinarize(HS, 0.5);
+HS = imbinarize(HS, 0.7);
+HS = HS(:,10:end-10);
 imshow(HS);
 
 H = HS;

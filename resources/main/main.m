@@ -6,6 +6,11 @@ function main
  
  %w_t = wall_thickness(img2)
  h = hough_tr(img2);
+ h = imcomplement(h);
+ [y0,x0] = find(h)
+ 
+ 
+ 
  
  %imshowpair(img,img2,'montage');
  

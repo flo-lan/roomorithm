@@ -6,7 +6,8 @@ function [result] = remove_details(img)
  S = regionprops(CC, 'Area');
  L = labelmatrix(CC);
  BW2 = ismember(L, find([S.Area] >= 10000));
- BW3 = imerode(BW2, [0 1 0; 1 1 1; 0 1 0]);
+ BW3 = imerode(BW2, [1 1 1; 1 1 1; 1 1 1]);
+ BW3 = bwareaopen(BW3, 200);
  
  % Apply morphological opening to remove 1-pixel-width vertical line
 se = strel('line',2,0);

@@ -1,5 +1,5 @@
 function main
- img = imread('img/Datei3.png', 'BackgroundColor',[1,1,1]);
+ img = imread('img/Datei4.png', 'BackgroundColor',[1,1,1]);
  % annotate windows
  img2 = remove_details(img);
  %img2 = imcomplement(img2);
@@ -7,6 +7,8 @@ function main
  w_t = wall_thickness(img2)
  
  %imshowpair(img,img2,'montage');
+ 
+ doordetection(img2);
  
  
 end

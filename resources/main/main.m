@@ -6,8 +6,9 @@ function main
  
  w_t = wall_thickness(img2)
  
- %imshowpair(img,img2,'montage');
+
  
- 
+ img2 = bwskel(img2, 'MinBranchLength', 20);
+ imshowpair(img,img2,'montage');
 end
 

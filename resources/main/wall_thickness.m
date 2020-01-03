@@ -6,7 +6,7 @@ function size = wall_thickness(bin_img)
  h = imcomplement(h);
  [y0,x0] = find(h);
  
- L = bwlabel(h, 8);
+ L = connectedComponentLabeling(h);
  L2 = L>0;
  L = L(L2);
  L_sort = sort(L);
@@ -18,7 +18,7 @@ function size = wall_thickness(bin_img)
  end
  
  A = A(A>50);
- size = mean(A)/13;
+ size = mean(A)/14;
 
 end
 

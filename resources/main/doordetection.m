@@ -45,7 +45,5 @@ function output = doordetection(bin_img, w_t)
     E = E(3:end, :)
     plot(E(:,1),E(:,2),'r*');
    
-    
-    
-
 end
+

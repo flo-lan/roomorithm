@@ -7,7 +7,7 @@ function output = doordetection(bin_img, w_t)
     hold on
     %plot(C(:,1),C(:,2),'r*');
 
-    C = sortrows(C)
+    C = sortrows(C);
     
     D = zeros(2);
 
@@ -22,7 +22,7 @@ function output = doordetection(bin_img, w_t)
     if (abs(C(end,1)-C(end-1,1))<w_t*1.5)
         D(end+1,:) = C(end,:);
     end
-    D = D(3:end, :)
+    D = D(3:end, :);
     
     %plot(D(:,1),D(:,2),'r*');
     
@@ -42,22 +42,25 @@ function output = doordetection(bin_img, w_t)
                   center = (D(i, :) + D(j, :)).'/2;
                   search1 = round(center+3.*normal1);
                   search2 = round(center+3.*normal2);
-                  if (bin_img(search1(1), search1(2))==0 && bin_img(search2(1), search2(2))==1)
-                  
-                            E(end+1,:) = D(i,:);
-                            E(end+1,:) = D(j,:);
-                            F(end+1,:) = center;
-                            G(end+1,:) = search1;
-                            G(end+1,:) = search2;
+                  if (bin_img(search1(2), search1(1))==0 && bin_img(search2(2), search2(1))==1)
+       
+                      
+                      E(end+1,:) = D(i,:);
+                      E(end+1,:) = D(j,:);
+                      F(end+1,:) = center;
+                      G(end+1,:) = search1;
+                      G(end+1,:) = search2;
+                      
+                      
                      
                   
-                  elseif (bin_img(search1(1), search1(2))==1 && bin_img(search2(1), search2(2))==0)
+                  elseif (bin_img(search1(2), search1(1))==1 && bin_img(search2(2), search2(1))==0)
                           
-                            E(end+1,:) = D(i,:);
-                            E(end+1,:) = D(j,:);
-                            F(end+1,:) = center;
-                            G(end+1,:) = search1;
-                            G(end+1,:) = search2;
+                      E(end+1,:) = D(i,:);
+                      E(end+1,:) = D(j,:);
+                      F(end+1,:) = center;
+                      G(end+1,:) = search1;
+                      G(end+1,:) = search2;
                             
                   end
               %end       
@@ -65,9 +68,9 @@ function output = doordetection(bin_img, w_t)
         end
     end
     
-    E = E(3:end, :)
-    F = F(3:end, :)
-    G = G(3:end, :)
+    E = E(3:end, :);
+    F = F(3:end, :);
+    G = G(3:end, :);
     plot(E(:,1),E(:,2),'r*');
     plot(F(:,1),F(:,2),'g*');
     plot(G(:,1),G(:,2),'b*');

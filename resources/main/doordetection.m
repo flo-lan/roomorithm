@@ -2,6 +2,8 @@ function door_count = doordetection(bin_img, w_t)
 %DOORDETECTION Author: Hoertner Filip
 %   Detects doors
 
+    door_count=0;
+
     C = corner(bin_img);
     imshow(bin_img);
     hold on
@@ -51,11 +53,11 @@ function door_count = doordetection(bin_img, w_t)
                       G(end+1,:) = search1;
                       
                       
-                      H = find_opposite(center, search1, F);
+                      H = find_opposite(center, search1, F, w_t);
                       
                       for k=1:numel(H)
                           
-                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F))==1)~=0))
+                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F, w_t))==1)~=0))
                               
                               door_count = door_count+1;
                               
@@ -75,11 +77,11 @@ function door_count = doordetection(bin_img, w_t)
                       G(end+1,:) = search2;
                       
                       
-                      H = find_opposite(center, search1, F);
+                      H = find_opposite(center, search1, F, w_t);
                       
                       for k=1:numel(H)
                           
-                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F))==1)~=0))
+                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F, w_t))==1)~=0))
                               
                               door_count = door_count+1;
                               

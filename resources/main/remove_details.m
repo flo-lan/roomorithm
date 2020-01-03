@@ -12,5 +12,11 @@ function [result] = remove_details(img)
  % Apply morphological opening to remove 1-pixel-width vertical line
 se = strel('line',2,0);
 BW4 = imopen(BW3,se);
-result = BW4;
+BW5 = zeros(size(BW4,1)+60,size(BW4,2)+60);
+for i = 1:size(BW4,1)
+    for j = 1:size(BW4,2)
+        BW5(i+30,j+30) = BW4(i,j);
+    end
+end
+result = BW5;
 end

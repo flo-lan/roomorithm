@@ -8,6 +8,6 @@ function main
  %imshowpair(img,img2,'montage');
  
  doordetection(img2, w_t);
- 
+
 
 end

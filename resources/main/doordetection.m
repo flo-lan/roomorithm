@@ -31,13 +31,13 @@ function output = doordetection(bin_img, w_t)
     for i = 1:size(D)-1
         for j = 1:size(D)
             if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.3 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
-              if((ismember(D(i, :), E)) == 0 & (bin_img((round(abs(D(i, 1)-D(j, 1))/2)+3), round(abs(D(i, 2)-D(j, 2))/2)) == 0))
+              if((ismember(D(i, :), E)) == 0)
+                  if ((bin_img(D(j,:)+(D(i,:)-D(j,:)/2)) == 0) & )
                     
                       
-                       E(end+1,:) = D(i,:);
-                        break 
-                end      
-               
+                       
+                  end
+              end       
             end
         end
     end

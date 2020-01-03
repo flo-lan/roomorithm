@@ -4,6 +4,8 @@ function possibleOpposites = find_opposite(centerpoint,normVec,centerpoints, w_t
 
 search = centerpoint+w_t*normVec;
 
+centerpoints = round(centerpoints);
+
 F = zeros(2);
 
 for i=w_t:7*w_t

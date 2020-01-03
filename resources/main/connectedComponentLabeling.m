@@ -1,6 +1,6 @@
-function [ labels ] = anodeg_bwlabel( data )
-%Source: https://de.mathworks.com/matlabcentral/fileexchange/45480-connected-component-labeling
-%anodeg_bwlable binary image labeling
+function [ labels ] = connectedComponentLabeling( data )
+% Source: https://de.mathworks.com/matlabcentral/fileexchange/45480-connected-component-labeling
+% anodeg_bwlable binary image labeling
 % Labels a binary image through 8-point connectivity without the need 
 % for any toolboxes. 
 [x,y] = size(data);
@@ -43,7 +43,7 @@ for i = 2:x                       % for each row
 end
 % remove the previous expansion of the image
 labels = labels(2:end,2:end-1);
-%% join linked areas
+% join linked areas
 % for each link, look through the other links and look for common labels.
 % if common labels exist they are linked -> replace both link with the 
 % union of the two. Repeat until there is no change in the links.

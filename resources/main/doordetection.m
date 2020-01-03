@@ -53,7 +53,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       G(end+1,:) = search1;
                       
                       
-                      H = find_opposite(center, search1, F, w_t)
+                      H = find_opposite(center, normal1, F, w_t)
                       
                       for k=1:numel(H)
                           
@@ -80,7 +80,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       G(end+1,:) = search2;
                       
                       
-                      H = find_opposite(center, search2, F, w_t)
+                      H = find_opposite(center, normal2, F, w_t)
                       
                       for k=1:numel(H)
                           

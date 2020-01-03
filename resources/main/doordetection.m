@@ -1,4 +1,4 @@
-function output = doordetection(bin_img, w_t)
+function door_count = doordetection(bin_img, w_t)
 %DOORDETECTION Author: Hoertner Filip
 %   Detects doors
 
@@ -49,9 +49,21 @@ function output = doordetection(bin_img, w_t)
                       E(end+1,:) = D(j,:);
                       F(end+1,:) = center;
                       G(end+1,:) = search1;
-                      G(end+1,:) = search2;
                       
                       
+                      H = find_opposite(center, search1, F);
+                      
+                      for k=1:numel(H)
+                          
+                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F))==1)~=0))
+                              
+                              door_count = door_count+1;
+                              
+                              
+                              break;
+                          end
+                          
+                      end
                      
                   
                   elseif (bin_img(search1(2), search1(1))==1 && bin_img(search2(2), search2(1))==0)
@@ -59,9 +71,24 @@ function output = doordetection(bin_img, w_t)
                       E(end+1,:) = D(i,:);
                       E(end+1,:) = D(j,:);
                       F(end+1,:) = center;
-                      G(end+1,:) = search1;
+                      
                       G(end+1,:) = search2;
-                            
+                      
+                      
+                      H = find_opposite(center, search1, F);
+                      
+                      for k=1:numel(H)
+                          
+                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F))==1)~=0))
+                              
+                              door_count = door_count+1;
+                              
+                              
+                              break;
+                          end
+                      end
+                           
+                      
                   end
               %end       
             end

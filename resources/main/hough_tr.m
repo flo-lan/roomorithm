@@ -1,5 +1,6 @@
-function H = hough(bin_img)
-%HOUGH Author: Hoertner Filip and Raphaello
+function H = hough_tr(bin_img)
+%Source: https://de.mathworks.com/matlabcentral/fileexchange/52183-simple-demo-of-hough-transform-implementation
+%modified by Hoertner Filip and Schimmerl Raphael
 %   does a hough transformation
 
 %Initializing other parameters

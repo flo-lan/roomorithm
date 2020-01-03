@@ -5,7 +5,7 @@ function output = doordetection(bin_img, w_t)
     C = corner(bin_img);
     imshow(bin_img);
     hold on
-    
+    %plot(C(:,1),C(:,2),'r*');
 
     C = sortrows(C)
     
@@ -22,21 +22,21 @@ function output = doordetection(bin_img, w_t)
     if (abs(C(end,1)-C(end-1,1))<w_t*1.5)
         D(end+1,:) = C(end,:);
     end
-    D = D(3:end, :);
+    D = D(3:end, :)
     
+    %plot(D(:,1),D(:,2),'r*');
     
     E = zeros(2);
     
     for i = 1:size(D)-1
         for j = 1:size(D)
-            if(sqrt((D(i, 1)-D(j,1))^2 - (D(i,2)-D(j, 2))^2) > w_t*0.05 && sqrt((D(i, 1)-D(j,1))^2 - (D(i,2)-D(j, 2))^2) < w_t*2)
+            if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.3 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
                 E(end+1,:) = D(i,:);
                 break 
             end
         end
     end
     
-    E
     E = E(3:end, :)
     plot(E(:,1),E(:,2),'r*');
    

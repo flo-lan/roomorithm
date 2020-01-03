@@ -32,7 +32,7 @@ function output = doordetection(bin_img, w_t)
     
     for i = 1:size(D)-1
         for j = 1:size(D)
-            if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.3 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
+            if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.003 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
               %if((ismember(D(i, :), E)) == 0)
                   line = [D(i,1)-D(j,1); D(i,2)-D(j,2)];
                   normal1 = [line(2); -line(1)];

@@ -17,8 +17,8 @@ function size = wall_thickness(bin_img)
      A(L_sort(k)) = A(L_sort(k))+1;
  end
  
- A = A(A>50);
- size = mean(A)/13;
+ A = A(A>10);
+ size = mean(A)/4;
 
 end
 

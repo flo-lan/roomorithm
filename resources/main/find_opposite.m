@@ -13,7 +13,7 @@ for i=1:7
     for j=-10:10
         for k=-10:10
             
-            if (contains(centerpoints, [searchStart(1)+j, searchStart(2)+k]))
+            if ((find(ismember([searchStart(1)+j, searchStart(2)+k], centerpoints)))~=0)
                 
                 F(end+1,:) = [searchStart(1)+j, searchStart(2)+k];
                 
@@ -24,7 +24,7 @@ for i=1:7
     
 end
     
-
+possibleOpposites = F;
 
 end
 

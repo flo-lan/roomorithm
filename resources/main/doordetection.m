@@ -27,23 +27,35 @@ function output = doordetection(bin_img, w_t)
     %plot(D(:,1),D(:,2),'r*');
     
     E = zeros(2);
+    F = zeros(2);
     
     for i = 1:size(D)-1
         for j = 1:size(D)
             if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.3 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
-              if((ismember(D(i, :), E)) == 0)
-                  if ((bin_img(D(j,:)+(D(i,:)-D(j,:)/2)) == 0) & )
-                    
-                      
+              %if((ismember(D(i, :), E)) == 0)
+                  vec = [D(i,:) D(j,:)];
+                  normal = norm(vec);
+                  center = (D(i, :) + D(j, :)).'/2;
+                  %if (bin_img(round(center(1)), round(center(2))) == 1)
+                  
+                  
+                  E(end+1,:) = D(i,:);
+                  E(end+1,:) = D(j,:);
+                  F(end+1,:) = center;
                        
-                  end
-              end       
+                 % end
+              %end       
             end
         end
     end
     
     E = E(3:end, :)
+    F = F(3:end, :)
     plot(E(:,1),E(:,2),'r*');
+    plot(F(:,1),F(:,2),'g*');
    
+    
+    
+
 end
 

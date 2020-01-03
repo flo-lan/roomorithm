@@ -13,10 +13,11 @@ function [result] = remove_details(img)
 se = strel('line',2,0); 
 BW4 = imopen(BW3,se); 
 BW5 = zeros(size(BW4,1)+200,size(BW4,2)+200); 
-for i = 1:size(BW4,1) 
-    for j = 1:size(BW4,2) 
-        BW5(i+100,j+100) = BW4(i,j); 
-    end 
-end 
+%for i = 1:size(BW4,1) 
+%    for j = 1:size(BW4,2) 
+%        BW5(i+100,j+100) = BW4(i,j); 
+%    end 
+%end 
+BW5(101:end-100,101:end-100) = BW4;
 result = BW5; 
 end

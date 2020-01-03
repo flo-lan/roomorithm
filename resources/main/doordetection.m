@@ -2,25 +2,32 @@ function output = doordetection(bin_img, w_t)
 %DOORDETECTION Author: Hoertner Filip
 %   Detects doors
 
-    C = corner(bin_img);
+    C = corner(bin_img)
     imshow(bin_img);
+    bi_img = bin_img;
     hold on
     %plot(C(:,1),C(:,2),'r*');
 
     C = sortrows(C)
-    
+    T = zeros(2);
+      for i = 1:size(C)
+        if(bi_img(C(i,1), C(i,2))==0)
+                T(end+1,:) = C(i,:);
+        end
+      end
+    T = T(3:end, :)
     D = zeros(2);
 
-    if (abs(C(1,1)-C(2,1))<w_t*1.5)
-        D(end+1,:) = C(1,:);
+    if (abs(T(1,1)-T(2,1))<w_t*1.5)
+        D(end+1,:) = T(1,:);
     end
-    for i = 2:(size(C)-1)
-        if ((abs(C(i,1)-C(i-1,1))<w_t*1.5) | (abs(C(i,1)-C(i+1,1))<w_t*1.5))
-           D(end+1,:) = C(i,:); 
+    for i = 2:(size(T)-1)
+        if ((abs(T(i,1)-T(i-1,1))<w_t*1.5) | (abs(T(i,1)-T(i+1,1))<w_t*1.5))
+           D(end+1,:) = T(i,:); 
         end
     end
-    if (abs(C(end,1)-C(end-1,1))<w_t*1.5)
-        D(end+1,:) = C(end,:);
+    if (abs(T(end,1)-T(end-1,1))<w_t*1.5)
+        D(end+1,:) = T(end,:);
     end
     D = D(3:end, :)
     

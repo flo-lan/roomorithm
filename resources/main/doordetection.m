@@ -28,22 +28,38 @@ function output = doordetection(bin_img, w_t)
     
     E = zeros(2);
     F = zeros(2);
+    G = zeros(2);
     
     for i = 1:size(D)-1
         for j = 1:size(D)
             if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.3 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
               %if((ismember(D(i, :), E)) == 0)
-                  vec = [D(i,:) D(j,:)];
-                  normal = norm(vec);
+                  line = [D(i,1)-D(j,1); D(i,2)-D(j,2)];
+                  normal1 = [line(2); -line(1)];
+                  normal1 = normal1./norm(normal1);
+                  normal2 = [-line(2); line(1)];
+                  normal2 = normal2./norm(normal2);
                   center = (D(i, :) + D(j, :)).'/2;
-                  %if (bin_img(round(center(1)), round(center(2))) == 1)
+                  search1 = round(center+3.*normal1);
+                  search2 = round(center+3.*normal2);
+                  if (bin_img(search1(1), search1(2))==0 && bin_img(search2(1), search2(2))==1)
                   
+                            E(end+1,:) = D(i,:);
+                            E(end+1,:) = D(j,:);
+                            F(end+1,:) = center;
+                            G(end+1,:) = search1;
+                            G(end+1,:) = search2;
+                     
                   
-                  E(end+1,:) = D(i,:);
-                  E(end+1,:) = D(j,:);
-                  F(end+1,:) = center;
-                       
-                 % end
+                  elseif (bin_img(search1(1), search1(2))==1 && bin_img(search2(1), search2(2))==0)
+                          
+                            E(end+1,:) = D(i,:);
+                            E(end+1,:) = D(j,:);
+                            F(end+1,:) = center;
+                            G(end+1,:) = search1;
+                            G(end+1,:) = search2;
+                            
+                  end
               %end       
             end
         end
@@ -51,8 +67,10 @@ function output = doordetection(bin_img, w_t)
     
     E = E(3:end, :)
     F = F(3:end, :)
+    G = G(3:end, :)
     plot(E(:,1),E(:,2),'r*');
     plot(F(:,1),F(:,2),'g*');
+    plot(G(:,1),G(:,2),'b*');
    
     
     

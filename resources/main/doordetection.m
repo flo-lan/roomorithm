@@ -1,4 +1,4 @@
-function door_count = doordetection(bin_img, w_t)
+function [door_count,bin_img] = doordetection(bin_img, w_t)
 %DOORDETECTION Author: Hoertner Filip
 %   Detects doors
 
@@ -53,14 +53,17 @@ function door_count = doordetection(bin_img, w_t)
                       G(end+1,:) = search1;
                       
                       
-                      H = find_opposite(center, search1, F, w_t);
+                      H = find_opposite(center, search1, F, w_t)
                       
                       for k=1:numel(H)
                           
-                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F, w_t))==1)~=0))
+                          fo = find_opposite(H(k),G(find(F==H(k))), F, w_t);
+                          
+                          if (sum(fo(:, 1) == center(1) & fo(:, 2) == center(2))~=0)
                               
                               door_count = door_count+1;
                               
+                              bin_img = dda(bin_img, center(1), center(2), H(k,1), H(k,2));
                               
                               break;
                           end
@@ -77,14 +80,17 @@ function door_count = doordetection(bin_img, w_t)
                       G(end+1,:) = search2;
                       
                       
-                      H = find_opposite(center, search1, F, w_t);
+                      H = find_opposite(center, search1, F, w_t)
                       
                       for k=1:numel(H)
                           
-                          if ((find(ismember(center, find_opposite(H(k),G(find(F==H(k))), F, w_t))==1)~=0))
+                          fo = find_opposite(H(k),G(find(F==H(k))), F, w_t);
+                          
+                          if (sum(fo(:, 1) == center(1) & fo(:, 2) == center(2))~=0)
                               
                               door_count = door_count+1;
                               
+                              bin_img = dda(bin_img, center(1), center(2), H(k,1), H(k,2));
                               
                               break;
                           end

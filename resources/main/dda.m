@@ -5,6 +5,7 @@ function res_mat = dda(matrix, x1, y1, x2, y2)
     dy = abs(y2 - y1);
     
     if dx == 0 && dy == 0
+        res_mat = matrix;
         return;
     end
     
@@ -26,7 +27,7 @@ function res_mat = dda(matrix, x1, y1, x2, y2)
     
     while i <= pixel
         % do something with that pixel
-        matrix(xActual,yActual) = 1;
+        matrix(yActual,xActual) = 0.5;
         
         x = x + dx*signX;
         y = y + dy*signY;

@@ -1,6 +1,6 @@
 function possibleOpposites = find_opposite(centerpoint,normVec,centerpoints, w_t)
 %FIND_OPPOSITE Author: Hoertner Filip
-%   finds opposite wall edge
+%   finds possible opposite wall edges
 
 searchPoint = round(centerpoint+w_t*normVec);
 
@@ -17,8 +17,11 @@ for i=w_t:7*w_t
             
             if (sum(centerpoints(:, 1) == (searchPoint(1)+j) & centerpoints(:, 2) == (searchPoint(2)+k)) > 0)
                 
-                F(end+1,:) = [searchPoint(1)+j, searchPoint(2)+k];
+                if ((searchPoint(1)+j ~= round(centerpoint(1)) || (searchPoint(2)+k) ~= round(centerpoint(2))) && (sum(F(:, 1) == (searchPoint(1)+j) & F(:, 2) == (searchPoint(2)+k)) == 0))
                 
+                    F(end+1,:) = [searchPoint(1)+j, searchPoint(2)+k];
+                
+                end
             end
             
         end

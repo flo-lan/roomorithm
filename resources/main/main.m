@@ -1,5 +1,5 @@
 function main
- img = imread('img/Datei4.png', 'BackgroundColor',[1,1,1]);
+ img = imread('img/Datei1.png', 'BackgroundColor',[1,1,1]);
  % annotate windows
  img2 = remove_details(img);
  %img2 = imcomplement(img2);

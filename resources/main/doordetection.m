@@ -13,7 +13,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
     
     D = zeros(2);
 
-    if (abs(C(1,1)-C(2,1))<w_t*1.5)
+    if (abs(C(1,1)-C(2,1)) < w_t*1.5)
         D(end+1,:) = C(1,:);
     end
     for i = 2:(size(C)-1)
@@ -86,7 +86,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       
                       
                       H = find_opposite(center, normal2, F, w_t);
-                    
+                      
                       for k=1:numel(H(:,1))
                           
                           fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), F, w_t);

@@ -68,14 +68,21 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       H = find_opposite(round(center), normal1, F, w_t);
                       
                       for k=1:numel(H(:,1))
+                          normal_op = [0 0];
                           
-                          fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), round(center), w_t);
+                          for l=1:numel(F(:,1))
+                              if (F(l,:)==H(k,:))
+                                  normal_op = I(l,:);
+                              end
+                          end
+                          
+                          fo = find_opposite(H(k,:),normal_op, round(center), w_t);
                       
                           if (sum(fo(:, 1) == round(center(1)) & fo(:, 2) == round(center(2))) >0)
                               
                               door_count = door_count+1;
-                              center
-                              H(k,:)
+                              center;
+                              H(k,:);
                               
                               bin_img = dda(bin_img, round(center(1)), round(center(2)), H(k,1), H(k,2));
                               
@@ -100,14 +107,21 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       H = find_opposite(round(center), normal2, F, w_t);
                       
                       for k=1:numel(H(:,1))
+                          normal_op = [0 0];
                           
-                          fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), round(center), w_t);
+                          for l=1:numel(F(:,1))
+                              if (F(l,:)==H(k,:))
+                                  normal_op = I(l,:);
+                              end
+                          end
+                          
+                          fo = find_opposite(H(k,:),normal_op, round(center), w_t);
                            
                           if (sum(fo(:, 1) == round(center(1)) & fo(:, 2) == round(center(2)))>0)
                               
                               door_count = door_count+1;
-                              center
-                              H(k,:)
+                              center;
+                              H(k,:);
                               
                               bin_img = dda(bin_img, round(center(1)), round(center(2)), H(k,1), H(k,2));
                               

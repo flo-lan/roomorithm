@@ -60,7 +60,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       for k=1:numel(H(:,1))
                           
                           fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), F, w_t);
-                          
+                      
                           if (sum(fo(:, 1) == center(1) & fo(:, 2) == center(2)) >0)
                               
                               door_count = door_count+1;
@@ -86,11 +86,11 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       
                       
                       H = find_opposite(center, normal2, F, w_t);
-                      
+                    
                       for k=1:numel(H(:,1))
                           
                           fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), F, w_t);
-                          
+                           
                           if (sum(fo(:, 1) == center(1) & fo(:, 2) == center(2))>0)
                               
                               door_count = door_count+1;

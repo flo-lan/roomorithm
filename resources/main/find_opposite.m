@@ -8,12 +8,12 @@ centerpoints = round(centerpoints);
 
 F = zeros(2);
 
-for i=20:round(7*w_t)
+for i=round(w_t):round(7*w_t)
     
     searchPoint = round(searchPoint+2*normVec);
     
-    for j=-round(sqrt(i)):round(sqrt(i))
-        for k=-round(sqrt(i)):round(sqrt(i))
+    for j=-20:20
+        for k=-20:20
             
             if (sum(centerpoints(:, 1) == (searchPoint(1)+j) & centerpoints(:, 2) == (searchPoint(2)+k)) > 0)
                 

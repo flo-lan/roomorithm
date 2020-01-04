@@ -32,12 +32,13 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
     F = zeros(2);
     G = zeros(2);
     I = zeros(2);
+    J = zeros(2);
     
     for i = 1:size(D)-1
         for j = 1:size(D)
             if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.003 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
               %if((ismember(D(i, :), E)) == 0)
-                  line = [D(i,1)-D(j,1); D(i,2)-D(j,2)];
+                  line = [D(i,1)-D(j,1) D(i,2)-D(j,2)];
                   normal1 = [line(2) -line(1)];
                   normal1 = normal1./norm(normal1);
                   normal2 = [-line(2) line(1)];
@@ -45,7 +46,14 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                   center = (D(i, :) + D(j, :))./2;
                   search1 = round(center+3.*normal1);
                   search2 = round(center+3.*normal2);
-                  if (bin_img(search1(2), search1(1))==0 && bin_img(search2(2), search2(1))==1)
+                  
+                  % to the sides of search 1/2
+                  search1_1 = round(search1+0.75*line);
+                  search1_2 = round(search1-0.75*line);
+                  search2_1 = round(search2+0.75*line);
+                  search2_2 = round(search2-0.75*line);
+                  
+                  if (bin_img(search1(2), search1(1))==0 && bin_img(search2(2), search2(1))==1 && bin_img(search2_1(2), search2_1(1))==0 && bin_img(search2_2(2), search2_2(1))==0)
        
                       
                       E(end+1,:) = D(i,:);
@@ -53,6 +61,8 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       F(end+1,:) = round(center);
                       G(end+1,:) = search1;
                       I(end+1,:) = normal1;
+                      J(end+1,:) = search2_1;
+                      J(end+1,:) = search2_2;
                       
                       
                       H = find_opposite(round(center), normal1, F, w_t);
@@ -75,7 +85,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       end
                      
                   
-                  elseif (bin_img(search1(2), search1(1))==1 && bin_img(search2(2), search2(1))==0)
+                  elseif (bin_img(search1(2), search1(1))==1 && bin_img(search2(2), search2(1))==0 && bin_img(search1_1(2), search1_1(1))==0 && bin_img(search1_2(2), search1_2(1))==0)
                           
                       E(end+1,:) = D(i,:);
                       E(end+1,:) = D(j,:);
@@ -83,6 +93,8 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       
                       G(end+1,:) = search2;
                       I(end+1,:) = normal2;
+                      J(end+1,:) = search1_1;
+                      J(end+1,:) = search1_2;
                       
                       
                       H = find_opposite(round(center), normal2, F, w_t);
@@ -113,9 +125,11 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
     E = E(3:end, :);
     F = F(3:end, :);
     G = G(3:end, :);
+    J = J(3:end, :);
     plot(E(:,1),E(:,2),'r*');
     plot(F(:,1),F(:,2),'g*');
     plot(G(:,1),G(:,2),'b*');
+    plot(J(:,1),J(:,2),'y*');
    
     
     

@@ -1,10 +1,10 @@
 function main
- img = imread('img/Datei0.png', 'BackgroundColor',[1,1,1]);
+ img = imread('img/Datei4.png', 'BackgroundColor',[1,1,1]);
  % annotate windows
  img2 = remove_details(img);
  %img2 = imcomplement(img2);
  
- w_t = wall_thickness(img2)
+ %w_t = wall_thickness(img2)
  
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
  w_tc = wall_thiccness(img2)

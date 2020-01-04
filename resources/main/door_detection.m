@@ -14,28 +14,28 @@ function [door_count,bin_img] = door_detection(bin_img, w_tc)
     
     cornerDetection_filter = zeros(2);
     
-     if (abs(cornerDetection1(1,2)-cornerDetection1(2,2))<  w_tc *2  &&  cornerDetection1(1,1) == cornerDetection1(2,1))
+     if ((abs(cornerDetection1(1,2)-cornerDetection1(2,2))<  w_tc *2 && abs(cornerDetection1(1,2)-cornerDetection1(2,2)) >  w_tc *0.35 )  &&  cornerDetection1(1,1) == cornerDetection1(2,1))
         cornerDetection_filter(end+1,:) = cornerDetection1(1,:);
     end
     for x = 2:(size(cornerDetection1)-1)
-        if ((abs(cornerDetection1(x-1,2)-cornerDetection1(x,2)) < w_tc *2  &&  cornerDetection1(x-1,1) == cornerDetection1(x,1)) || (abs(cornerDetection1(x,2)-cornerDetection1(x+1,2)) < w_tc *2  &&  cornerDetection1(x+1,1) == cornerDetection1(x,1)))
+        if (((abs(cornerDetection1(x-1,2)-cornerDetection1(x,2)) < w_tc *2 && abs(cornerDetection1(x-1,2)-cornerDetection1(x,2)) >  w_tc *0.35 )  &&  cornerDetection1(x-1,1) == cornerDetection1(x,1)) || ((abs(cornerDetection1(x,2)-cornerDetection1(x+1,2)) < w_tc *2 && abs(cornerDetection1(x,2)-cornerDetection1(x+1,2)) >  w_tc *0.35 )  &&  cornerDetection1(x+1,1) == cornerDetection1(x,1)))
            cornerDetection_filter(end+1,:) = cornerDetection1(x,:); 
         end
     end
-    if ((abs(cornerDetection1(end,2)-cornerDetection1(end-1,2)) < w_tc *2)  &&  cornerDetection1(end,1) == cornerDetection1(end-1,1)) 
+    if (((abs(cornerDetection1(end,2)-cornerDetection1(end-1,2)) <w_tc *2 && abs(cornerDetection1(end,2)-cornerDetection1(end-1,2)) >  w_tc *0.35 ))  &&  cornerDetection1(end,1) == cornerDetection1(end-1,1)) 
         cornerDetection_filter(end+1,:) = cornerDetection1(end,:);
     end
 
     
-    if (abs(cornerDetection2(1,1)-cornerDetection2(2,1))<  w_tc *2  &&  cornerDetection2(1,2) == cornerDetection2(2,2))
+    if ((abs(cornerDetection2(1,1)-cornerDetection2(2,1))<  w_tc *2 && abs(cornerDetection2(1,1)-cornerDetection2(2,1)) >  w_tc *0.35 ) &&  cornerDetection2(1,2) == cornerDetection2(2,2))
         cornerDetection_filter(end+1,:) = cornerDetection(1,:);
     end
     for x = 2:(size(cornerDetection2)-1)
-        if ((abs(cornerDetection2(x-1,1)-cornerDetection2(x,1)) < w_tc *2  &&  cornerDetection2(x-1,2) == cornerDetection2(x,2)) || (abs(cornerDetection2(x,1)-cornerDetection2(x+1,1)) < w_tc *2  &&  cornerDetection2(x+1,2) == cornerDetection2(x,2)))
+        if (((abs(cornerDetection2(x-1,1)-cornerDetection2(x,1)) < w_tc *2 && abs(cornerDetection2(x-1,1)-cornerDetection2(x,1)) >  w_tc *0.35 ) &&  cornerDetection2(x-1,2) == cornerDetection2(x,2)) || ((abs(cornerDetection2(x,1)-cornerDetection2(x+1,1)) < w_tc *2 && abs(cornerDetection2(x,1)-cornerDetection2(x+1,1)) >  w_tc *0.35 ) &&  cornerDetection2(x+1,2) == cornerDetection2(x,2)))
            cornerDetection_filter(end+1,:) = cornerDetection2(x,:); 
         end
     end
-    if ((abs(cornerDetection2(end,1)-cornerDetection2(end-1,1)) < w_tc*2)  &&  cornerDetection2(end,2) == cornerDetection2(end-1,2)) 
+    if (((abs(cornerDetection2(end,1)-cornerDetection2(end-1,1)) < w_tc*2) && abs(cornerDetection2(end,1)-cornerDetection2(end-1,1)) >  w_tc *0.35 ) &&  cornerDetection2(end,2) == cornerDetection2(end-1,2)) 
         cornerDetection_filter(end+1,:) = cornerDetection2(end,:);
     end
     cornerDetection_filter = cornerDetection_filter(3:end, :)

@@ -14,7 +14,6 @@ for i=round(w_t):round(7*w_t)
     
     for j=-20:20
         for k=-20:20
-            
             if (sum(centerpoints(:, 1) == (searchPoint(1)+j) & centerpoints(:, 2) == (searchPoint(2)+k)) > 0)
                 
                 if ((searchPoint(1)+j ~= round(centerpoint(1)) || (searchPoint(2)+k) ~= round(centerpoint(2))) && (sum(F(:, 1) == (searchPoint(1)+j) & F(:, 2) == (searchPoint(2)+k)) == 0))

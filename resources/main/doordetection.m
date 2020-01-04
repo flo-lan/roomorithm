@@ -32,20 +32,28 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
     F = zeros(2);
     G = zeros(2);
     I = zeros(2);
+    J = zeros(2);
     
     for i = 1:size(D)-1
         for j = 1:size(D)
             if(sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) > w_t*0.003 && sqrt((D(i, 1)-D(j,1))^2 + (D(i,2)-D(j, 2))^2) < w_t*2)
               %if((ismember(D(i, :), E)) == 0)
-                  line = [D(i,1)-D(j,1); D(i,2)-D(j,2)];
-                  normal1 = [line(2); -line(1)];
+                  line = [D(i,1)-D(j,1) D(i,2)-D(j,2)];
+                  normal1 = [line(2) -line(1)];
                   normal1 = normal1./norm(normal1);
-                  normal2 = [-line(2); line(1)];
+                  normal2 = [-line(2) line(1)];
                   normal2 = normal2./norm(normal2);
-                  center = (D(i, :) + D(j, :)).'/2;
+                  center = (D(i, :) + D(j, :))./2;
                   search1 = round(center+3.*normal1);
                   search2 = round(center+3.*normal2);
-                  if (bin_img(search1(2), search1(1))==0 && bin_img(search2(2), search2(1))==1)
+                  
+                  % to the sides of search 1/2
+                  search1_1 = round(search1+0.75*line);
+                  search1_2 = round(search1-0.75*line);
+                  search2_1 = round(search2+0.75*line);
+                  search2_2 = round(search2-0.75*line);
+                  
+                  if (bin_img(search1(2), search1(1))==0 && bin_img(search2(2), search2(1))==1 && bin_img(search2_1(2), search2_1(1))==0 && bin_img(search2_2(2), search2_2(1))==0)
        
                       
                       E(end+1,:) = D(i,:);
@@ -53,21 +61,30 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       F(end+1,:) = round(center);
                       G(end+1,:) = search1;
                       I(end+1,:) = normal1;
+                      J(end+1,:) = search2_1;
+                      J(end+1,:) = search2_2;
                       
                       
-                      H = find_opposite(center, normal1, F, w_t);
+                      H = find_opposite(round(center), normal1, F, w_t);
                       
                       for k=1:numel(H(:,1))
+                          normal_op = [0 0];
                           
-                          fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), F, w_t);
+                          for l=1:numel(F(:,1))
+                              if (F(l,:)==H(k,:))
+                                  normal_op = I(l,:);
+                              end
+                          end
+                          
+                          fo = find_opposite(H(k,:),normal_op, round(center), w_t);
                       
-                          if (sum(fo(:, 1) == center(1) & fo(:, 2) == center(2)) >0)
+                          if (sum(fo(:, 1) == round(center(1)) & fo(:, 2) == round(center(2))) >0)
                               
                               door_count = door_count+1;
-                              center
-                              H(k,:)
+                              center;
+                              H(k,:);
                               
-                              bin_img = dda(bin_img, center(1), center(2), H(k,1), H(k,2));
+                              bin_img = dda(bin_img, round(center(1)), round(center(2)), H(k,1), H(k,2));
                               
                               break;
                           end
@@ -75,7 +92,7 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       end
                      
                   
-                  elseif (bin_img(search1(2), search1(1))==1 && bin_img(search2(2), search2(1))==0)
+                  elseif (bin_img(search1(2), search1(1))==1 && bin_img(search2(2), search2(1))==0 && bin_img(search1_1(2), search1_1(1))==0 && bin_img(search1_2(2), search1_2(1))==0)
                           
                       E(end+1,:) = D(i,:);
                       E(end+1,:) = D(j,:);
@@ -83,21 +100,30 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
                       
                       G(end+1,:) = search2;
                       I(end+1,:) = normal2;
+                      J(end+1,:) = search1_1;
+                      J(end+1,:) = search1_2;
                       
                       
-                      H = find_opposite(center, normal2, F, w_t);
+                      H = find_opposite(round(center), normal2, F, w_t);
                       
                       for k=1:numel(H(:,1))
+                          normal_op = [0 0];
                           
-                          fo = find_opposite(H(k,:),I(find(F==H(k,:), 1)), F, w_t);
+                          for l=1:numel(F(:,1))
+                              if (F(l,:)==H(k,:))
+                                  normal_op = I(l,:);
+                              end
+                          end
+                          
+                          fo = find_opposite(H(k,:),normal_op, round(center), w_t);
                            
-                          if (sum(fo(:, 1) == center(1) & fo(:, 2) == center(2))>0)
+                          if (sum(fo(:, 1) == round(center(1)) & fo(:, 2) == round(center(2)))>0)
                               
                               door_count = door_count+1;
-                              center
-                              H(k,:)
+                              center;
+                              H(k,:);
                               
-                              bin_img = dda(bin_img, center(1), center(2), H(k,1), H(k,2));
+                              bin_img = dda(bin_img, round(center(1)), round(center(2)), H(k,1), H(k,2));
                               
                               break;
                           end
@@ -113,9 +139,11 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
     E = E(3:end, :);
     F = F(3:end, :);
     G = G(3:end, :);
+    J = J(3:end, :);
     plot(E(:,1),E(:,2),'r*');
     plot(F(:,1),F(:,2),'g*');
     plot(G(:,1),G(:,2),'b*');
+    plot(J(:,1),J(:,2),'y*');
    
     
     

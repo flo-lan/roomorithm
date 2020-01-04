@@ -8,7 +8,7 @@ centerpoints = round(centerpoints);
 
 F = zeros(2);
 
-for i=round(w_t):round(7*w_t)
+for i=round(w_t):round(5*w_t)
     
     searchPoint = round(searchPoint+2*normVec);
     

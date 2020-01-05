@@ -66,7 +66,6 @@ function [window_count] = windowdetection(img, w_tc)
  annotatedWindows = imoverlay(annotatedWindows, hitImgDownWindow, 'blue');
  
  window_count = 0;
- 
  % loop through annotated image
    for row = 1:size(threshold_img, 1)
         for col = 1:size(threshold_img, 2)
@@ -80,15 +79,16 @@ function [window_count] = windowdetection(img, w_tc)
                        if ((windowCol - col) > w_tc * 2)
                            % distance needs to be larger than average wall
                            % thickness + extra
-                           %window_count = window_count + 1;
+                           window_count = window_count + 1;
                        end
                        break
                     elseif (threshold_img(row, windowCol) == 0)
                         % no connected pixel (white line must go between
                         % annotated points
                         break
+                    elseif ((size(threshold_img, 1) > (row + 2) && threshold_img(row + 2, windowCol) == 255) || ((row - 2) > 0 && threshold_img(row - 2, windowCol) == 255))
+                       break
                     end
-                    
                 end
             end
             
@@ -109,12 +109,13 @@ function [window_count] = windowdetection(img, w_tc)
                        % no connected pixel (white line must go between
                        % annotated points
                        break
+                   elseif ((size(threshold_img, 2) > (col + 2) && threshold_img(windowRow, col + 2) == 255) || ((col - 2) > 0 && threshold_img(windowRow, col - 2) == 255))
+                       break
                    end                   
                 end
             end
         end
    end
  imshow(annotatedWindows);
- sum(hitImgUpWindow(:) == 1)
 end
 

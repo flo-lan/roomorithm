@@ -1,8 +1,7 @@
 function main
- img = imread('img/Datei4.png', 'BackgroundColor',[1,1,1]);
+ img = imread('img/Datei2.png', 'BackgroundColor',[1,1,1]);
  % annotate windows
- window_count = windowdetection(img);
- window_count
+
  img2 = remove_details(img);
  %img2 = imcomplement(img2);
 
@@ -11,7 +10,8 @@ function main
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
  w_tc = wall_thiccness(img2);
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
- 
+ window_count = windowdetection(img, w_tc);
+ window_count
  %[door_count,img3] = doordetection(img2, w_tc);
  %{
  door_count

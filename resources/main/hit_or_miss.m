@@ -1,6 +1,7 @@
 % A⊛B=(A⊖B1)∩(Ac⊖B2)
 % https://docs.opencv.org/master/db/d06/tutorial_hitOrMiss.html
 function [hitImg] = hit_or_miss(binImg, sElementFg, sElementBg)
+    % Author: Florian Langeder
     % erode img with first structure element (A⊖B)
     erodedImg = imerode(binImg,sElementFg);
     

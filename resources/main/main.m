@@ -1,5 +1,5 @@
 function main
- img = imread('img/Datei1.png', 'BackgroundColor',[1,1,1]);
+ img = imread('img/Datei3.png', 'BackgroundColor',[1,1,1]);
  % annotate windows
  img2 = remove_details(img);
  %img2 = imcomplement(img2);
@@ -23,9 +23,12 @@ function main
  %[door_count,img_3] = door_detection(img2, w_tc);
 
  door_count
- rooms = roomdetection(img3)
  figure;
  imshow(img3);
+ 
+ rooms = roomdetection(img3)
+ numOfRooms = numel(rooms)/2
+
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
  
 

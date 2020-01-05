@@ -1,4 +1,4 @@
-function [numOfRooms] = roomdetection(img)
+function [numOfRoom space] = roomdetection(img)
     %WALL_THICKNESS Author: Schimmerl Raphael
     h = imcomplement(img);
     L = connectedComponentLabeling(h);
@@ -6,11 +6,23 @@ function [numOfRooms] = roomdetection(img)
 
      L = L(L2);
      numberOfObjects = max(L,[],'all');
-
-      A = zeros(M,1);
-
-
+     L = sort(L);
+      
+    A = zeros(numberOfObjects - 1,1);
+    sum = 0;
     
+  for k = 1:length(L)
+     if (L(k) < numberOfObjects)
+     A(L(k)) = A(L(k))+1;
+     sum = sum + 1;
+     end
+  end
+    A = sort(A); 
+    B = zeros(numberOfObjects - 1,2);
     
-    numOfRooms = numberOfObjects - 1;
+    for k = 1:numberOfObjects - 1
+     B(k, :) = [round(k) A(k)/sum];
+    end
+    
+    numOfRoom = B;
 end

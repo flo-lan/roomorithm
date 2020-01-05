@@ -23,6 +23,7 @@ function main
  %[door_count,img_3] = door_detection(img2, w_tc);
 
  door_count
+ rooms = roomdetection(img3)
  figure;
  imshow(img3);
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%

@@ -37,7 +37,7 @@ function main
      figure;
      imshow(img3);
 
-     rooms = roomdetection(img3);
+     rooms = roomdetection(img3)
      roomCount(k) = numel(rooms)/2;
      %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
      stairs = findStairs(img, w_tc);

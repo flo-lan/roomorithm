@@ -111,4 +111,3 @@ function [window_count] = windowdetection(img, w_tc)
         end
    end
 end
-

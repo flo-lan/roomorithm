@@ -1,6 +1,5 @@
 function [result] = findStairs(img)
 % returns 1 if the image contains stairs, 0 else
-
 scale = wall_thiccness(img);
 img2 = img;
 img2 = img2(:,:,1);
@@ -31,7 +30,8 @@ end
 
 img2 = img2(minX:maxX, minY:maxY);
 
-% create a mask in order to remove walls and other thicker structures
+% remove gray areas, create a mask in order to remove walls 
+% and other thicker structures
 wallMask = zeros(size(img2, 1), size(img2, 2));
 img3 = zeros(size(img2, 1), size(img2, 2));
 img3(img2 >= 80) = 1;
@@ -46,25 +46,25 @@ for i = 2:(size(img2, 1) - 1)
     end
 end
 
-% apply a dilate to make mask remove more
-dilatedMask = zeros(size(wallMask, 1), size(wallMask, 2));
+% apply erosion to make mask remove more
+erodedMask = zeros(size(wallMask, 1), size(wallMask, 2));
 for i = 5:(size(wallMask, 1) - 4)
     for j = 5:(size(wallMask, 2) - 4)
         if wallMask(i, j) == 1
-            dilatedMask((i - 4):(i + 4), (j - 4):(j + 4)) = 1;
+            erodedMask((i - 4):(i + 4), (j - 4):(j + 4)) = 1;
         end
     end
 end
 
 % apply mask
-img3 = img3 | dilatedMask;
+img3 = img3 | erodedMask;
 
-% apply erosion to create clusters from the remaining lines
+% apply dilation to create clusters from the remaining lines
 img4 = 255 * (img3);
-for i = 13:(size(img3, 1) - 12)
-    for j = 13:(size(img3, 2) - 12)
+for i = 9:(size(img3, 1) - 8)
+    for j = 9:(size(img3, 2) - 8)
         if img3(i, j) == 0
-            img4((i - 12):(i + 12), (j - 12):(j + 12)) = 0;
+            img4((i - 8):(i + 8), (j - 8):(j + 8)) = 0;
         end
     end
 end
@@ -84,7 +84,6 @@ for i = sz:(size(img4, 1) - (sz - 1))
         end
     end
 end
-
 
 result = max(max(img5));
 end

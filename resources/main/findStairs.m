@@ -1,4 +1,6 @@
 function [result] = findStairs(img)
+% returns 1 if the image contains stairs, 0 else
+
 scale = wall_thiccness(img);
 img2 = img;
 img2 = img2(:,:,1);
@@ -84,10 +86,7 @@ for i = sz:(size(img4, 1) - (sz - 1))
 end
 
 
-stairMask = zeros(size(img, 1), size(img, 2));
-stairMask(minX:maxX, minY:maxY) = img5;
-
-result = stairMask;
+result = max(max(img5));
 end
 
 

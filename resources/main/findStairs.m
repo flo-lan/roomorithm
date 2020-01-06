@@ -1,7 +1,7 @@
 function [result] = findStairs(img, scale)
 % returns 1 if the image contains stairs, 0 else
-img2 = img;
-img2 = img2(:,:,1);
+scale = scale / 23;
+img2 = rgbtogray(img);
 
 % crop image to remove black border
 minX = size(img2, 1);
@@ -10,7 +10,7 @@ maxX = 1;
 maxY = 1;
 for i = 1:size(img2, 1)
     for j = 1:size(img2, 2)
-        if img2(i, j) ~= 0
+        if img2(i, j) == 0
             if i < minX
                 minX = i;
             end
@@ -33,7 +33,7 @@ img2 = img2(minX:maxX, minY:maxY);
 % and other thicker structures
 wallMask = zeros(size(img2, 1), size(img2, 2));
 img3 = zeros(size(img2, 1), size(img2, 2));
-img3(img2 >= 80) = 1;
+img3(img2 >= 130) = 1;
 count = img3;
 
 for i = 2:(size(img2, 1) - 1)
@@ -45,7 +45,7 @@ for i = 2:(size(img2, 1) - 1)
     end
 end
 
-% apply erosion to make mask remove more
+% % apply erosion to make mask remove more
 erodedMask = zeros(size(wallMask, 1), size(wallMask, 2));
 for i = 5:(size(wallMask, 1) - 4)
     for j = 5:(size(wallMask, 2) - 4)
@@ -60,7 +60,7 @@ img3 = img3 | erodedMask;
 
 % apply dilation to create clusters from the remaining lines
 img4 = 255 * (img3);
-dilationGrade = round(scale * 9);
+dilationGrade = round(9 * scale);
 for i = dilationGrade:(size(img3, 1) - (dilationGrade - 1))
     for j = dilationGrade:(size(img3, 2) - (dilationGrade - 1))
         if img3(i, j) == 0
@@ -73,7 +73,7 @@ end
 img4 = img4 / 255;
 img5 = zeros(size(img4));
 
-clusterSize = round(scale * 40);
+clusterSize = round(40 * scale);
 for i = clusterSize:(size(img4, 1) - (clusterSize - 1))
     for j = clusterSize:(size(img4, 2) - (clusterSize - 1))
         countSum = sum(sum(img4((i - (clusterSize - 1)):(i + (clusterSize - 1)),...
@@ -86,6 +86,22 @@ for i = clusterSize:(size(img4, 1) - (clusterSize - 1))
 end
 
 result = max(max(img5));
+
 end
 
+function imgGray = rgbtogray(img)
+R=img(:, :, 1);
+G=img(:, :, 2);
+B=img(:, :, 3);
+
+[x, y, ~]=size(img);   
+imgGray = zeros(x, y, 'uint8');
+
+for i = 1:x
+    for j = 1:y
+        imgGray(i, j) = (R(i, j)*0.2989)+(G(i, j)*0.5870)+(B(i, j)*0.114);
+    end
+end
+
+end
 

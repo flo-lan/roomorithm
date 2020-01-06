@@ -1,5 +1,5 @@
 function main
- files = dir('./img/*.png');
+ files = dir('./resources/main/img/*.png');
  file = [];
  windowCount = zeros(size(files));
  doorCount = zeros(size(files));
@@ -7,7 +7,7 @@ function main
  stairs = zeros(size(files));
  roomsCells = {};
  for k=1:length(files)
-     fileName = join(['./img/*.png' files(k).name]);
+     fileName = join(['./resources/main/img/' files(k).name]);
 
      img = imread(fileName, 'BackgroundColor',[1,1,1]);
      file = [file; fileName];
@@ -36,6 +36,16 @@ function main
  end
  %%%%%%%%%%%%%%%% FLO %%%%%%%%%%%%%%%
   
- result = jsonencode(table(file, windowCount, doorCount, roomCount, stairs))
- rooms = jsonencode(roomsCells)
+ result = jsonencode(table(file, windowCount, doorCount, roomCount, stairs));
+ rooms = jsonencode(roomsCells);
+ 
+ % https://de.mathworks.com/matlabcentral/answers/110573-write-string-in-text-file
+ fid = fopen('result.json','wt');
+ fprintf(fid, result);
+ fclose(fid);
+
+ fid2 = fopen('rooms.json','wt');
+ fprintf(fid2, rooms);
+ fclose(fid2);
+ "Successfully written to result.json and rooms.json"
 end

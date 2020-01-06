@@ -40,6 +40,7 @@ function main
      rooms = roomdetection(img3)
      roomCount(k) = numel(rooms)/2;
      %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
+     stairs = findStairs(img, w_tc);
  end
- jsonencode(table(file, windowCount, doorCount, roomCount))
+ jsonencode(table(file, windowCount, doorCount, roomCount, stairs))
 end

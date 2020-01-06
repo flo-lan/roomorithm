@@ -1,5 +1,11 @@
 function main
- img = imread('img/Datei3.png', 'BackgroundColor',[1,1,1]);
+ file = [];
+ windowCount = [];
+ doorCount = [];
+ roomCount = [];
+ fileName = "img/Datei3.png";
+ img = imread(fileName, 'BackgroundColor',[1,1,1]);
+ file = [file, fileName];
  % annotate windows
  img2 = remove_details(img);
  %img2 = imcomplement(img2);
@@ -11,25 +17,25 @@ function main
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
   
  %imshowpair(img,img2,'montage');
- window_count = windowdetection(img, w_tc);
- window_count
- [door_count,img3] = doordetection(img2, w_tc);
+ windowCountResult = windowdetection(img, w_tc);
+ windowCount = [windowCount, windowCountResult];
+ 
+ [doorCountResult,img3] = doordetection(img2, w_tc);
+ doorCount = [doorCount, doorCountResult];
  %{
- door_count
+ doorCount
  figure;
  imshow(img3);
  %}
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
  
- %[door_count,img_3] = door_detection(img2, w_tc);
+ %[doorCount,img_3] = door_detection(img2, w_tc);
 
- door_count
  figure;
  imshow(img3);
  
- rooms = roomdetection(img3)
- numOfRooms = numel(rooms)/2
-
+ rooms = roomdetection(img3);
+ roomCount = [roomCount, numel(rooms)/2];
  %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
- 
+ jsonencode(table(file, windowCount, doorCount, roomCount))
 end

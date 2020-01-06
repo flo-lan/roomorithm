@@ -60,10 +60,11 @@ img3 = img3 | erodedMask;
 
 % apply dilation to create clusters from the remaining lines
 img4 = 255 * (img3);
-for i = 9:(size(img3, 1) - 8)
-    for j = 9:(size(img3, 2) - 8)
+dilationGrade = round(scale * 9);
+for i = dilationGrade:(size(img3, 1) - (dilationGrade - 1))
+    for j = 9:(size(img3, 2) - (dilationGrade - 1))
         if img3(i, j) == 0
-            img4((i - 8):(i + 8), (j - 8):(j + 8)) = 0;
+            img4((i - (dilationGrade - 1)):(i + (dilationGrade - 1)), (j - (dilationGrade - 1)):(j + (dilationGrade - 1))) = 0;
         end
     end
 end
@@ -72,14 +73,14 @@ end
 img4 = img4 / 255;
 img5 = zeros(size(img4));
 
-sz = round(scale * 40);
-for i = sz:(size(img4, 1) - (sz - 1))
-    for j = sz:(size(img4, 2) - (sz - 1))
-        countSum = sum(sum(img4((i - (sz - 1)):(i + (sz - 1)),...
-            (j - (sz - 1)):(j + (sz - 1)))));
+clusterSize = round(scale * 40);
+for i = clusterSize:(size(img4, 1) - (clusterSize - 1))
+    for j = clusterSize:(size(img4, 2) - (clusterSize - 1))
+        countSum = sum(sum(img4((i - (clusterSize - 1)):(i + (clusterSize - 1)),...
+            (j - (clusterSize - 1)):(j + (clusterSize - 1)))));
         if countSum < 300
-            img5((i - (sz - 1)):(i + (sz - 1)),...
-                (j - (sz - 1)):(j + (sz - 1))) = 1;
+            img5((i - (clusterSize - 1)):(i + (clusterSize - 1)),...
+                (j - (clusterSize - 1)):(j + (clusterSize - 1))) = 1;
         end
     end
 end

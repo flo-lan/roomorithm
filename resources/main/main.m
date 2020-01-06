@@ -1,11 +1,11 @@
 function main
- files = dir('./resources/main/img/*.png');
+ files = dir('./img/*.png');
  file = [];
  windowCount = zeros(size(files));
  doorCount = zeros(size(files));
  roomCount = zeros(size(files));
  for k=1:length(files)
-     fileName = files(k).name;
+     fileName = join(['./img/' files(k).name]);
 
      img = imread(fileName, 'BackgroundColor',[1,1,1]);
      file = [file; fileName];

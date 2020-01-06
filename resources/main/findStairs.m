@@ -62,7 +62,7 @@ img3 = img3 | erodedMask;
 img4 = 255 * (img3);
 dilationGrade = round(scale * 9);
 for i = dilationGrade:(size(img3, 1) - (dilationGrade - 1))
-    for j = 9:(size(img3, 2) - (dilationGrade - 1))
+    for j = dilationGrade:(size(img3, 2) - (dilationGrade - 1))
         if img3(i, j) == 0
             img4((i - (dilationGrade - 1)):(i + (dilationGrade - 1)), (j - (dilationGrade - 1)):(j + (dilationGrade - 1))) = 0;
         end

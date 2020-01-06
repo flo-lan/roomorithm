@@ -1,5 +1,5 @@
 function cornerDetection = corner_detection(bin_img)
-%DOORDETECTION Author: Alam Mark
+%CORNERDETECTION Author: Alam Mark
 %   Detects corners
 
     cornerDetection = zeros(2);

@@ -1,4 +1,6 @@
 function [ labels ] = connectedComponentLabeling( data )
+%CONNECTEDCOMPONENTLABELING Author: Schimmerl Raphael
+%   Labels connected components
 % Source: https://de.mathworks.com/matlabcentral/fileexchange/45480-connected-component-labeling
 % anodeg_bwlable binary image labeling
 % Labels a binary image through 8-point connectivity without the need 

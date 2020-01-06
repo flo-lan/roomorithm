@@ -1,5 +1,5 @@
 function w_tc = wall_thiccness(bin_img)
-%WALL_THICKNESS Author: Alam Mark
+%WALL_THICCNESS Author: Alam Mark
 %   Detects appr. average wall thickness
 
  hx = bin_img;

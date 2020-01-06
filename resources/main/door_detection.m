@@ -1,5 +1,5 @@
 function [door_count,bin_img] = door_detection(bin_img, w_tc)
-%DOORDETECTION Author: Alam Mark
+%DOOR_DETECTION Author: Alam Mark
 %   Detects doors
     door_count=0;
     cornerDetection = corner_detection(bin_img);

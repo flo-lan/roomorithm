@@ -1,5 +1,5 @@
 function main
- files = dir('./resources/main/img/*.png');
+ files = dir('./img/*.png');
  file = [];
  windowCount = zeros(size(files));
  doorCount = zeros(size(files));
@@ -7,7 +7,7 @@ function main
  stairs = zeros(size(files));
  roomsCells = {};
  for k=1:length(files)
-     fileName = join(['./resources/main/img/' files(k).name]);
+     fileName = join(['./img/*.png' files(k).name]);
 
      img = imread(fileName, 'BackgroundColor',[1,1,1]);
      file = [file; fileName];

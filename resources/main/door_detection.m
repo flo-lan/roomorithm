@@ -3,10 +3,6 @@ function [door_count,bin_img] = door_detection(bin_img, w_tc)
 %   Detects doors
     door_count=0;
     cornerDetection = corner_detection(bin_img);
-    
-    %imshow(bin_img)
-    hold on
-    %plot(cornerDetection(:,1),cornerDetection(:,2),'r*');
 
     cornerDetection1 = sortrows(cornerDetection);
     cornerDetection2 = sortrows(cornerDetection,2);

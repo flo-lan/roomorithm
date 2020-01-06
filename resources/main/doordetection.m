@@ -5,10 +5,6 @@ function [door_count,bin_img] = doordetection(bin_img, w_t)
     door_count=0;
 
     C = corner(bin_img);
-    %imshow(bin_img);
-    hold on
-    %plot(C(:,1),C(:,2),'r*');
-
     C = sortrows(C);
     
     D = zeros(2);

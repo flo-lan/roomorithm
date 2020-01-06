@@ -7,7 +7,7 @@ function [result] = remove_details(img)
  S = regionprops(CC, 'Area'); 
  L = labelmatrix(CC); 
  BW2 = ismember(L, find([S.Area] >= 10000)); 
- BW3 = imerode(BW2, [1 1 1; 1 1 1; 1 1 1]); 
+ BW3 = erosion(BW2, [1 1 1; 1 1 1; 1 1 1]); 
    
  % Apply morphological opening to remove 1-pixel-width vertical line 
  se = strel('line',2,0); 

@@ -1,7 +1,7 @@
 function [numOfRoom space] = roomdetection(img)
     %WALL_THICKNESS Author: Schimmerl Raphael
     h = imcomplement(img);
-    L = connectedComponentLabeling(h);
+    L = bwlabel(h);
     L2 = L>0;
 
      L = L(L2);

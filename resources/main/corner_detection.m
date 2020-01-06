@@ -15,5 +15,5 @@ function cornerDetection = corner_detection(bin_img)
         end
     end
     
-    cornerDetection = cornerDetection(3:end,:)
+    cornerDetection = cornerDetection(3:end,:);
 end

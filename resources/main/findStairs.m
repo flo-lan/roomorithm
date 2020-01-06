@@ -1,4 +1,5 @@
 function [result] = findStairs(img)
+scale = wall_thiccness(img);
 img2 = img;
 img2 = img2(:,:,1);
 
@@ -27,7 +28,6 @@ for i = 1:size(img2, 1)
 end
 
 img2 = img2(minX:maxX, minY:maxY);
-
 
 % create a mask in order to remove walls and other thicker structures
 wallMask = zeros(size(img2, 1), size(img2, 2));
@@ -70,11 +70,15 @@ end
 % find the stairs candidates (the biggest clusters)
 img4 = img4 / 255;
 img5 = zeros(size(img4));
-for i = 40:(size(img4, 1) - 39)
-    for j = 40:(size(img4, 2) - 39)
-        countSum = sum(sum(img4((i - 39):(i + 39), (j - 39):(j + 39))));
+
+sz = round(scale * 40);
+for i = sz:(size(img4, 1) - (sz - 1))
+    for j = sz:(size(img4, 2) - (sz - 1))
+        countSum = sum(sum(img4((i - (sz - 1)):(i + (sz - 1)),...
+            (j - (sz - 1)):(j + (sz - 1)))));
         if countSum < 300
-            img5((i - 39):(i + 39), (j - 39):(j + 39)) = 1;
+            img5((i - (sz - 1)):(i + (sz - 1)),...
+                (j - (sz - 1)):(j + (sz - 1))) = 1;
         end
     end
 end

@@ -59,12 +59,6 @@ function [window_count] = windowdetection(img, w_tc)
                                1 0 0 1 1];
  hitImgDownWindow = hit_or_miss(threshold_img, sElementDownWindow, sElementDownWindowNegative);
  
- % annotate found patterns
- annotatedWindows = imoverlay(threshold_img, hitImgLeftWindow, 'red');
- annotatedWindows = imoverlay(annotatedWindows, hitImgRightWindow, 'green');
- annotatedWindows = imoverlay(annotatedWindows, hitImgUpWindow, 'cyan');
- annotatedWindows = imoverlay(annotatedWindows, hitImgDownWindow, 'blue');
- 
  window_count = 0;
  % loop through annotated image
    for row = 1:size(threshold_img, 1)
@@ -116,6 +110,5 @@ function [window_count] = windowdetection(img, w_tc)
             end
         end
    end
- imshow(annotatedWindows);
 end
 

@@ -7,7 +7,7 @@ function main
  stairs = zeros(size(files));
  roomsCells = {};
  for k=1:length(files)
-     fileName = join(['./img/*.png' files(k).name]);
+     fileName = join(['./img/' files(k).name]);
 
      img = imread(fileName, 'BackgroundColor',[1,1,1]);
      file = [file; fileName];

@@ -1,11 +1,11 @@
 function main
- files = dir('./resources/main/img/Datei0*.png');
+ files = dir('./resources/main/img/*.png');
  file = [];
  windowCount = zeros(size(files));
  doorCount = zeros(size(files));
  roomCount = zeros(size(files));
  stairs = zeros(size(files));
- rooms = [];
+ roomsCells = {};
  for k=1:length(files)
      fileName = join(['./resources/main/img/' files(k).name]);
 
@@ -28,13 +28,14 @@ function main
      
      %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
      roomResult = roomdetection(img3);
-     rooms = [rooms, jsonencode(roomResult)];
-    
+     roomsCells(k) = {roomResult};
      roomCount(k) = numel(roomResult)/2;
      %%%%%%%%%%%%%%%% MARK %%%%%%%%%%%%%%%
-     stairs = findStairs(img, w_tc);
+     
+     stairs(k) = findStairs(img, w_tc);
  end
- 
  %%%%%%%%%%%%%%%% FLO %%%%%%%%%%%%%%%
- jsonencode(table(file, windowCount, doorCount, rooms, roomCount, stairs))
+  
+ result = jsonencode(table(file, windowCount, doorCount, roomCount, stairs))
+ rooms = jsonencode(roomsCells)
 end

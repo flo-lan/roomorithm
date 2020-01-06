@@ -1,4 +1,5 @@
 function erodedImg = erosion(img, se)
+% Author: Florian Langeder
     erodedImg = zeros(size(img));
     centerY = ceil(size(se, 1) / 2);
     centerX = ceil(size(se, 2) / 2);
